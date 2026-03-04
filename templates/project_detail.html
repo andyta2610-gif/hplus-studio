@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="project-detail-container">
+
+    <div class="detail-info">
+        <h1>{{ project.title }}</h1>
+
+        <p><strong>project_type:</strong> {{ project.project_type }}</p>
+        <p><strong>Area:</strong> {{ project.Area }}</p>
+        <p><strong>Year:</strong> {{ project.Year }}</p>
+        <p><strong>Design & Construct:</strong> {{ project.DesignConstruct }}</p>
+        <p><strong>Status:</strong> {{ project.Status }}</p>
+
+        <p class="detail-desc">{{ project.description }}</p>
+    </div>
+
+    <div class="detail-gallery">
+        {% for img in project.images %}
+            <img src="{{ img }}" class="thumb" onclick="openLightbox({{ loop.index0 }})">
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+
+    <img id="lightbox-img">
+
+    <span class="prev" onclick="changeImg(-1)">&#10094;</span>
+    <span class="next" onclick="changeImg(1)">&#10095;</span>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="form-wrapper">
+    <h2 style="text-align:center">Liên hệ tư vấn</h2>
+
+    <form id="contact-form" action="/contact-submit" method="POST" class="contact-box">
+
+        <input type="text" name="name" placeholder="Họ và tên" required>
+        <input type="text" name="phone" placeholder="Số điện thoại" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="location" placeholder="Vị trí địa lý của công trình" required>
+        <input type="text" name="project_type" placeholder="Loại hình công trình" required>
+        <input type="text" name="budget" placeholder="Ngân sách dự kiến" required>
+
+        <textarea name="message" rows="10" placeholder="Mô tả thêm thông tin cụ thể như diện tích, số tầng, số phòng, công năng, sở thích, ... bạn nhé!"></textarea>
+
+        <!-- 🔥 v3 token -->
+        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+        <button type="submit" class="contact-btn">Gửi yêu cầu</button>
+    </form>
+</div>
+
+<!-- 🔥 reCAPTCHA v3 script (đúng site_key của anh) -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LfptXosAAAAAOGYwpvi3Fwe8rc-d9NAfa-RlFWK"></script>
+
+<script>
+grecaptcha.ready(function () {
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+
+        e.preventDefault();   // ⛔ chặn submit để chờ token
+
+        grecaptcha.execute("6LfptXosAAAAAOGYwpvi3Fwe8rc-d9NAfa-RlFWK", { action: "submit" })
+            .then(function (token) {
+
+                console.log("TOKEN v3:", token);  // kiểm tra xem token có chạy không
+
+                document.getElementById("g-recaptcha-response").value = token;
+
+                e.target.submit(); // ✔ gửi form
+            });
+    });
+});
+</script>
+
+{% endblock %}

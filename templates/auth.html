@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Zen Interior AI - Authentication</title>
+    <link rel="stylesheet" href="/static/luxury.css">
+</head>
+
+<body class="auth-body">
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <h2>Zen Interior AI</h2>
+        <p class="subtitle">Thiết kế nội thất bằng sức mạnh AI</p>
+
+        <!-- GOOGLE LOGIN -->
+        <a href="/auth/google">
+            <button class="google-btn">Đăng nhập với Google</button>
+        </a>
+
+        <div class="divider">hoặc</div>
+
+        <!-- TABS -->
+        <div class="auth-tabs">
+            <button id="tab-login" class="active" onclick="showLogin()">Đăng nhập</button>
+            <button id="tab-register" onclick="showRegister()">Đăng ký</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="login-form" action="/login" method="post">
+            <label>Email</label>
+            <input type="email" name="username" required placeholder="Nhập email">
+
+            <label>Mật khẩu</label>
+            <input type="password" name="password" required placeholder="Nhập mật khẩu">
+
+            <button class="primary-btn" type="submit">Đăng nhập</button>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="register-form" action="/register" method="post" style="display:none;">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="Email mới">
+
+            <label>Mật khẩu</label>
+            <input type="password" name="password" required placeholder="Tạo mật khẩu">
+
+            <button class="primary-btn" type="submit">Tạo tài khoản</button>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+function showLogin() {
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("register-form").style.display = "none";
+    document.getElementById("tab-login").classList.add("active");
+    document.getElementById("tab-register").classList.remove("active");
+}
+
+function showRegister() {
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("register-form").style.display = "block";
+    document.getElementById("tab-register").classList.add("active");
+    document.getElementById("tab-login").classList.remove("active");
+}
+</script>
+
+</body>
+</html>

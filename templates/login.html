@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Zen Interior AI</title>
+    <link rel="stylesheet" href="/static/luxury.css?v=3">
+</head>
+<body class="auth-body">
+
+<div class="auth-container">
+
+    <!-- LEFT SIDE -->
+    <div class="auth-left">
+        <h1>Zen Interior AI</h1>
+        <p>
+            AI-powered architectural & interior design platform  
+            for modern studios worldwide.
+        </p>
+
+        <div class="auth-features">
+            <div>✔ AI Design Generation</div>
+            <div>✔ Photorealistic Rendering</div>
+            <div>✔ SaaS Subscription System</div>
+            <div>✔ Global Studio Ready</div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="auth-right">
+
+        <div class="auth-card">
+
+            <h2>Welcome Back</h2>
+            <p class="auth-sub">Sign in to your workspace</p>
+
+            {% if error %}
+            <div class="error-box">
+                {{ error }}
+            </div>
+            {% endif %}
+
+            <form action="/login" method="post">
+
+                <label>Email</label>
+                <input type="text" name="username" required>
+
+                <label>Password</label>
+                <input type="password" name="password" required>
+
+                <button type="submit" class="auth-btn">
+                    Login
+                </button>
+            </form>
+
+            <p class="auth-footer">
+                Don’t have an account?
+                <a href="/register-page">Create one</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div><div id="register-form" style="display:none; margin-top:30px;">
+
+    <h3>Create Account</h3>
+
+    <form action="/register" method="post">
+        <label>Email</label>
+        <input type="text" name="email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit" class="auth-btn">
+            Register
+        </button>
+    </form>
+
+</div>
+
+<script>
+function showRegister() {
+    document.getElementById("register-form").style.display = "block";
+}
+</script>
+
+</body>
+</html>

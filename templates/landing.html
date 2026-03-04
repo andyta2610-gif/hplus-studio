@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}H+ Studio - Architecture{% endblock %}
+
+{% block content %}
+
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+
+    <div class="slides">
+        <div class="slide active" style="background-image: url('/static/p1.jpg');"></div>
+        <div class="slide" style="background-image: url('/static/p2.jpg');"></div>
+        <div class="slide" style="background-image: url('/static/p3.jpg');"></div>
+    </div>
+
+    <div class="hero-content">
+        <a href="/auth" class="hero-cta">Start it free</a>
+    </div>
+
+</section>
+
+<!-- PROJECTS SECTION (AD9 style) -->
+<section class="ad9-projects">
+    <h2 class="section-title-ad9">Projects</h2>
+
+    <div class="project-grid-ad9">
+        <div class="project-item-ad9">
+            <img src="/static/p1.jpg" alt="Project 1">
+            <h3>Aurora Residence</h3>
+        </div>
+
+        <div class="project-item-ad9">
+            <img src="/static/p2.jpg" alt="Project 2">
+            <h3>Kyoto Zen Villa</h3>
+        </div>
+
+        <div class="project-item-ad9">
+            <img src="/static/p3.jpg" alt="Project 3">
+            <h3>Saigon Modern Loft</h3>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>H+ Studio Dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>H+ Studio</h2>
+
+        <div class="user-box">
+            <p>{{ user.email }}</p>
+            <span class="plan">
+                {% if user.subscription_status == "active" %}
+                    PRO
+                {% else %}
+                    FREE
+                {% endif %}
+            </span>
+        </div>
+
+        <a href="/logout" class="logout">Đăng xuất</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <h1>Bảng điều khiển</h1>
+
+        <!-- METRICS -->
+        <div class="metrics">
+            <div class="metric-card">
+                <h3>Tổng dự án</h3>
+                <p>{{ total_projects }}</p>
+            </div>
+
+            <div class="metric-card">
+                <h3>Sử dụng hôm nay</h3>
+                <p>{{ user.daily_usage }}</p>
+            </div>
+
+            <div class="metric-card">
+                <h3>Gói</h3>
+                <p>
+                    {% if user.subscription_status == "active" %}
+                        PRO
+                    {% else %}
+                        FREE
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+        <!-- CREATE DESIGN -->
+        <div class="card">
+            <h2>Tạo thiết kế mới</h2>
+
+            <form action="/design-form" method="post">
+                <input type="text" name="room_type" placeholder="Loại phòng" required>
+                <input type="number" name="area" placeholder="Diện tích (m2)" required>
+                <input type="text" name="style" value="Tropical × Japandi">
+                <input type="number" name="budget" placeholder="Ngân sách">
+                <textarea name="description" placeholder="Mô tả chi tiết..."></textarea>
+
+                <button type="submit">Tạo thiết kế</button>
+            </form>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="projects">
+            {% for project in projects %}
+            <div class="project-card">
+                {% if project.image_path %}
+                    <img src="{{ project.image_path }}">
+                {% endif %}
+                <div class="project-info">
+                    <h4>{{ project.room_type }}</h4>
+                    <p>{{ project.style }}</p>
+                    <a href="/project/{{ project.id }}">Xem chi tiết</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

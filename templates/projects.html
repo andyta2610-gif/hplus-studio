@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="projects-page">
+
+    {% for p in projects %}
+    <div class="project-block {% if loop.index is even %}reverse{% endif %}">
+        
+         <div class="project-grid-wrapper">
+            <div class="project-grid">
+                {% for img in p.images[:9] %}
+                <img src="{{ img }}" alt="">
+                {% endfor %}
+            </div>
+
+           <a href="/project/{{ p.id }}" class="more-overlay">MORE</a>
+        </div>
+        <!-- THÔNG TIN -->
+        <div class="project-info">
+            <h2>{{ p.title }}</h2>
+            <div class="info-line"><strong>project_type:</strong> {{ p.project_type }}</div>
+            <div class="info-line"><strong>Area:</strong> {{ p.Area }}</div>
+            <div class="info-line"><strong>Year:</strong> {{ p.Year }}</div>
+            <div class="info-line"><strong>Design and Construct:</strong> {{ p.DesignConstruct }}</div>
+            <div class="info-line"><strong>Status:</strong> {{ p.Status }}</div>
+            <p class="desc">{{ p.description }}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

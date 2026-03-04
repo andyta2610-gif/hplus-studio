@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Interior Design Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --sidebar: #111827;
+            --card: rgba(255,255,255,0.05);
+            --border: rgba(255,255,255,0.08);
+            --accent: #6366f1;
+            --text: #f1f5f9;
+            --sub: #94a3b8;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            width: 260px;
+            background: var(--sidebar);
+            padding: 30px 20px;
+            height: 100vh;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .history {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .history-item {
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            background: rgba(255,255,255,0.04);
+            font-size: 13px;
+        }
+
+        .history-item:hover {
+            background: rgba(99,102,241,0.2);
+        }
+
+        /* ===== MAIN ===== */
+        .main {
+            flex: 1;
+            padding: 50px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .card {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px;
+            width: 100%;
+            border-radius: 14px;
+            border: none;
+            background: linear-gradient(135deg,#6366f1,#8b5cf6);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .download-btn {
+            margin-top: 15px;
+            background: #10b981;
+        }
+
+        .progress-bar {
+            height: 6px;
+            width: 0%;
+            background: var(--accent);
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: width 0.3s;
+        }
+
+        @media(max-width: 900px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <div class="logo">🏠 AI Design Pro</div>
+    <div><b>Projects</b></div>
+    <div class="history" id="historyList"></div>
+</div>
+
+<div class="main">
+
+    <h1>Create New Design</h1>
+
+    <div class="card">
+        <div class="form-grid">
+            <div>
+                <select id="user_type">
+                    <option value="customer">Customer</option>
+                    <option value="architect">Architect</option>
+                </select>
+            </div>
+            <div>
+                <input id="room_type" placeholder="Bedroom">
+            </div>
+            <div>
+                <input id="area" type="number" placeholder="20 m2">
+            </div>
+            <div>
+                <input id="style" placeholder="Zen, Modern">
+            </div>
+            <div>
+                <input id="budget" type="number" placeholder="150 triệu">
+            </div>
+        </div>
+
+        <button onclick="generateDesign()">Generate Design</button>
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+let projects = JSON.parse(localStorage.getItem("designProjects")) || [];
+
+function saveProjects() {
+    localStorage.setItem("designProjects", JSON.stringify(projects));
+}
+
+function loadHistory() {
+    const historyDiv = document.getElementById("historyList");
+    historyDiv.innerHTML = "";
+    projects.forEach((p, index) => {
+        historyDiv.innerHTML += `
+            <div class="history-item" onclick="loadProject(${index})">
+                ${p.room_type} - ${p.style}
+            </div>
+        `;
+    });
+}
+
+function loadProject(index) {
+    displayResult(projects[index].data);
+}
+
+async function generateDesign() {
+
+    const progress = document.getElementById("progressBar");
+    progress.style.width = "10%";
+
+    const response = await fetch("http://127.0.0.1:8000/design", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({
+            user_type: user_type.value,
+            room_type: room_type.value,
+            area: parseFloat(area.value),
+            style: style.value,
+            budget: parseFloat(budget.value)
+        })
+    });
+
+    progress.style.width = "60%";
+
+    const data = await response.json();
+
+    progress.style.width = "100%";
+
+    setTimeout(()=> progress.style.width="0%", 800);
+
+    projects.unshift({
+        room_type: room_type.value,
+        style: style.value,
+        data: data
+    });
+
+    saveProjects();
+    loadHistory();
+    displayResult(data);
+}
+
+function displayResult(data) {
+
+    if (data.error) {
+        result.innerHTML = `<div class="card">${data.error}</div>`;
+        return;
+    }
+
+    let html = `
+        <div class="card">
+            <h3>Summary</h3>
+            <p>${data.summary}</p>
+        </div>
+
+        <div class="card">
+            <h3>Layout</h3>
+            <ul>${data.layout_ideas.map(i=>`<li>${i}</li>`).join("")}</ul>
+        </div>
+    `;
+
+    if (data.image_url) {
+        html += `
+        <div class="card image-box">
+            <h3>AI Render</h3>
+            <img src="${data.image_url}" />
+            <button class="download-btn" onclick="downloadImage('${data.image_url}')">
+                Download Image
+            </button>
+        </div>`;
+    }
+
+    result.innerHTML = html;
+}
+
+function downloadImage(dataUrl) {
+    const a = document.createElement("a");
+    a.href = dataUrl;
+    a.download = "ai-design.png";
+    a.click();
+}
+
+loadHistory();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="news-page">
+    <h1 class="news-title">Tin Tức Chuyên ngành</h1>
+
+    <div class="news-grid">
+        {% for item in news_list %}
+        <a class="news-card" href="{{ item.link }}" target="_blank">
+            <img src="{{ item.thumbnail }}" alt="">
+            
+            <div class="news-info">
+                <h3>{{ item.title }}</h3>
+                <p class="news-date">{{ item.date }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

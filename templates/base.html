@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <meta charset="UTF-8">
+    <title>{% block title %}H+ studio{% endblock %}</title>
+
+    <link rel="stylesheet" href="/static/style_ad9.css?v=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="/" class="logo">
+    <img src="/static/logo.png" alt="Logo" class="logo-img">
+    <span>Architecture - Interior Design</span>
+</a>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-wrapper">
+
+        <div class="footer-left">
+            <div class="footer-info">
+                <p>Số 55 Nguyễn Đình Thi - Tam Thắng - TpHCM | hotline 866.62.58.68</p>
+
+                <div class="footer-social">
+                    <a href="https://facebook.com/hplus.studio.vt" target="_blank">Facebook</a>
+                    <span> | </span>
+                    <a href="http://hplus.studio.vt@gmail.com" target="_blank">Email</a>
+                    <span> | </span>
+                    <a href="https://zalo.me/0866625868" target="_blank">Zalo</a>
+                </div>
+
+                <p class="copyright">© 2024 H+ studio</p>
+            </div>
+        </div>
+
+        <div class="footer-map">
+            <iframe 
+                width="100%" height="100" style="border:0;border-radius:12px;"
+                loading="lazy" allowfullscreen 
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyXXXXX&q=Số+55+Nguyễn+Đình+Thi+TPHCM">
+            </iframe>
+        </div>
+
+    </div>
+</footer>
+
+<script src="/static/slider.js"></script>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+<script src="/static/app.js"></script>
+</body>
+</html>

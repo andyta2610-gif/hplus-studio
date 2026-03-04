@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kết quả thiết kế</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Architecture/Interior AI Design</h1>
+
+        {% if result %}
+
+            <div class="card">
+                <h2>Thiết kế AI đề xuất</h2>
+
+                {% if result.design_text %}
+                    <pre style="white-space: pre-wrap;">
+{{ result.design_text }}
+                    </pre>
+                {% else %}
+                    <p>Không có nội dung thiết kế.</p>
+                {% endif %}
+            </div>
+
+            {% if result.image_url %}
+            <div class="card">
+                <h3>Hình ảnh minh hoạ</h3>
+                <img src="{{ result.image_url }}" width="100%">
+            </div>
+            {% endif %}
+
+        {% else %}
+            <div class="card">
+                <p>Không tìm thấy dữ liệu thiết kế.</p>
+            </div>
+        {% endif %}
+
+        <br>
+        <a href="/dashboard">← Quay lại Dashboard</a>
+    </div>
+</body>
+</html>

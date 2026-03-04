@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}H+ Studio{% endblock %}
+
+{% block content %}
+
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+
+    <div class="slides">
+        <div class="slide active" style="background-image:url('/static/1.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/2.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/3.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/4.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/5.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/6.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/7.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/8.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/9.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/10.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/11.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/12.jpg');"></div>
+        <div class="slide" style="background-image:url('/static/13.jpg');"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1 class="hero-title">Kiến tạo không gian sống chất lượng.</h1>
+        <a href="/contact" class="hero-btn">Đăng ký tư vấn</a>
+    </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="section">
+    <h2 class="section-title">DỰ ÁN NỔI BẬT</h2>
+
+   <div class="featured-grid">
+    {% for p in featured_projects %}
+    <a href="/project/{{ p.id }}" class="featured-card">
+        <div class="featured-img" style="background-image: url('{{ p.cover }}');"></div>
+        <div class="featured-info">
+            <h3>{{ p.name }}</h3>
+            <p>{{ p.category }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+</section>
+
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}

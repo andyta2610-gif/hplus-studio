@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="margin-top:120px;text-align:center;">Danh sách yêu cầu tư vấn</h1>
+
+<table class="contact-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên khách</th>
+            <th>Số điện thoại</th>
+            <th>Email</th>
+            <th>Nội dung</th>
+            <th>Thời gian</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for c in contacts %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.name }}</td>
+            <td>{{ c.phone }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.message }}</td>
+            <td>{{ c.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
