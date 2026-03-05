@@ -74,7 +74,7 @@ def projects(request: Request):
     )
 
 
-@app.get("/project/{project_id}", response_class=HTMLResponse)
+@app.get("/projects/{project_id}", response_class=HTMLResponse)
 def project_detail(request: Request, project_id: int):
 
     project = next((p for p in projects_data if p["id"] == project_id), None)
@@ -139,7 +139,12 @@ def contact_success(request: Request):
         {"request": request}
     )
 
-
+@app.get("/news", response_class=HTMLResponse)
+def news(request: Request):
+    return templates.TemplateResponse(
+        "news.html",
+        {"request": request}
+    )
 # =============================
 # EMAIL
 # =============================
