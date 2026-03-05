@@ -177,11 +177,3 @@ Message:
     server.login(sender, password)
     server.sendmail(sender, receiver, msg.as_string())
     server.quit()
-
-
-# =============================
-# TEST
-# =============================
-@app.get("/test")
-def test():
-    return {"status": "ok"}
