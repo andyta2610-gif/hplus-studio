@@ -334,3 +334,7 @@ Nội dung: {message}
 
     except Exception as e:
         print(">>> ERROR in background task:", e)
+
+@app.get("/test")
+def test():
+    return {"status": "ok"}
