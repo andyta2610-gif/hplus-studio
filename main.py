@@ -17,6 +17,7 @@ from sqlalchemy import create_engine, text
 
 db_url = "mysql+pymysql://root:@localhost/hplus_contact"
 engine = create_engine(db_url)
+
 app = FastAPI()
 
 
@@ -27,8 +28,6 @@ app.add_middleware(
     allow_headers=["*"],
     allow_credentials=True,
 )
-
-app = FastAPI()
 
 app.mount(
     "/static",
@@ -187,7 +186,7 @@ def news(request: Request):
 # ==========================
 # MYSQL
 # ==========================
-# def save_to_database(name, phone, email, location, project_type, budget, message):
+# save_to_database(name, phone, email, location, project_type, budget, message):
     try:
         conn = mysql.connector.connect(
             host="localhost",
