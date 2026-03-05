@@ -127,7 +127,7 @@ async def not_found(request: Request, exc):
     )
 
 
-@app.get("/projects/{{ project.id }}")
+@app.get("/projects/{ project.id }")
 def project_detail(request: Request, project_id: int):
     project = next((p for p in projects_data if p["id"] == project_id), None)
 
@@ -187,7 +187,7 @@ def news(request: Request):
 # ==========================
 # MYSQL
 # ==========================
-def save_to_database(name, phone, email, location, project_type, budget, message):
+# def save_to_database(name, phone, email, location, project_type, budget, message):
     try:
         conn = mysql.connector.connect(
             host="localhost",
