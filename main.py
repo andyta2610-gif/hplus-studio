@@ -27,18 +27,6 @@ templates = Jinja2Templates(directory="templates")
 
 
 # =============================
-@app.middleware("http")
-async def redirect_root_to_www(request: Request, call_next):
-
-    host = request.headers.get("host")
-
-    if host == "hplus.id.vn":
-        url = str(request.url).replace("hplus.id.vn", "www.hplus.id.vn")
-        return RedirectResponse(url)
-
-    return await call_next(request)
-
-# =============================
 # HOME
 # =============================
 @app.get("/", response_class=HTMLResponse)
