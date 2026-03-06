@@ -101,7 +101,7 @@ def project_detail(request: Request, slug: str):
 # =============================
 # REDIRECT OLD PROJECT ID
 # =============================
-@app.get("/projects/id/{project_id}")
+@app.get("/project/{project_id}")
 def redirect_old_project(project_id: int):
 
     project = next((p for p in projects_data if p["id"] == project_id), None)
