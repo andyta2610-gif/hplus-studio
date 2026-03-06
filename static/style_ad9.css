@@ -639,3 +639,11 @@ column-count:2;
 column-count:1;
 }
 }
+
+.project-block{
+transition:transform .35s ease;
+}
+
+.project-block:hover{
+transform:translateY(-5px);
+}
