@@ -4,12 +4,17 @@
 <div class="projects-page">
 
     {% for p in projects %}
-    <div class="project-block {% if loop.index is even %}reverse{% endif %}">
+    <div class="project-block data-aos="fade-up" {% if loop.index is even %}reverse{% endif %}">
         
          <div class="project-grid-wrapper">
             <div class="project-grid">
                 {% for img in p.images[:9] %}
-                <img src="{{ img }}" alt="">
+                <img 
+                    src="{{ img }}" 
+                    alt="{{ p.title }}" 
+                    loading="lazy"
+                    decoding="async"
+                >
                 {% endfor %}
             </div>
 
