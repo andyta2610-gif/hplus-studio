@@ -25,6 +25,15 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
+
+# =============================
+@app.middleware("http")
+async def https_redirect(request: Request, call_next):
+    if request.url.scheme == "http":
+        url = request.url.replace(scheme="https")
+        return RedirectResponse(url=str(url))
+    return await call_next(request)
+
 # =============================
 # HOME
 # =============================
