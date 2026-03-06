@@ -30,18 +30,25 @@
 
 <!-- FEATURED PROJECTS -->
 <section class="section">
+
+
     <h2 class="section-title">DỰ ÁN NỔI BẬT</h2>
 
    <div class="featured-grid">
     {% for p in featured_projects %}
-    <a href="/projects/{{ p.slug }}" class="featured-card">
-        <div class="featured-img" style="background-image: url('{{ p.cover }}');"></div>
-        <div class="featured-info">
-            <h3>{{ p.name }}</h3>
-            <p>{{ p.category }}</p>
-        </div>
+    <div class="featured-card">
+
+    <a href="/projects/{{ p.slug }}">
+    <img src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy">
     </a>
+
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.project_type }}</p>
+      
+    </div>
+
     {% endfor %}
+
 </div>
 </section>
 
