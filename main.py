@@ -28,10 +28,14 @@ templates = Jinja2Templates(directory="templates")
 
 # =============================
 @app.middleware("http")
-async def https_redirect(request: Request, call_next):
-    if request.url.scheme == "http":
-        url = request.url.replace(scheme="https")
-        return RedirectResponse(url=str(url))
+async def redirect_root_to_www(request: Request, call_next):
+
+    host = request.headers.get("host")
+
+    if host == "hplus.id.vn":
+        url = str(request.url).replace("hplus.id.vn", "www.hplus.id.vn")
+        return RedirectResponse(url)
+
     return await call_next(request)
 
 # =============================
