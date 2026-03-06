@@ -5,6 +5,7 @@
 projects_data = [
     {
         "id": 1,
+        "slug": "casa-blanca-garden",
         "title": "Casa Blanca Garden",
         "project_type": "Villa garden",
         "Area": "500m2",
@@ -31,6 +32,7 @@ projects_data = [
     # -----------------------------------------------------
     {
         "id": 2,
+        "slug": "cho-Lach-house",
         "title": "Chợ Lách House",
         "project_type": "villa garden",
         "Area": "300m2",
@@ -60,6 +62,7 @@ projects_data = [
 
     {
         "id": 3,
+        "slug": "truong-cong-dinh-house",
         "title": "Trương Công Định House",
         "project_type": "Townhouse",
         "Area": "200m2",
@@ -87,6 +90,7 @@ projects_data = [
 
     {
         "id": 4,
+        "slug": "thao-dien-arpartment",
         "title": "Thảo Điền Apartment",
         "project_type": "Apartment",
         "Area": "70m2",
@@ -114,6 +118,7 @@ projects_data = [
 
     {
         "id": 5,
+        "slug": "vung-tau-sunset",
         "title": "Vũng Tàu Sunset",
         "project_type": "Townhouse",
         "Area": "300m2",
@@ -140,6 +145,7 @@ projects_data = [
   # -----------------------------------------------------
     {
         "id": 6,
+        "slug": "moon-cafe",
         "title": "Moon Café",
         "project_type": "Coffee shop",
         "Area": "150m2",
@@ -166,6 +172,7 @@ projects_data = [
     # -----------------------------------------------------
     {
         "id": 7,
+        "slug": "vif-office",
         "title": "Tập Đoàn VFI",
         "project_type": "Office",
         "Area": "1000m2",
@@ -192,6 +199,7 @@ projects_data = [
     # -----------------------------------------------------
     {
         "id": 8,
+        "slug": "tran-xuan-do-house",
         "title": "Trần Xuân Độ House",
         "project_type": "Townhouse",
         "Area": "160m2",
@@ -217,6 +225,7 @@ projects_data = [
     # -----------------------------------------------------
     {
         "id": 9,
+        "slug": "happy-garden-retreat",
         "title": "Happy Garden Retreat",
         "project_type": "resort",
         "Area": "3000m2",

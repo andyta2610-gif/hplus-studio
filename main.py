@@ -92,7 +92,7 @@ def projects(request: Request):
     )
 
 
-@app.get("/projects/{project_id}", response_class=HTMLResponse)
+@app.get("/projects/{slug}", response_class=HTMLResponse)
 def project_detail(request: Request, project_id: int):
 
     project = next((p for p in projects_data if p["id"] == project_id), None)
@@ -113,12 +113,15 @@ def project_detail(request: Request, project_id: int):
     )
 
 
-@app.get("/project/{project_id}")
-def redirect_project(project_id: int):
-    return RedirectResponse(
-        url=f"/projects/{project_id}",
-        status_code=301
-    )
+@app.get("/projects/id/{project_id}")
+def redirect_old_project(project_id: int):
+
+    project = next((p for p in projects_data if p["id"] == project_id), None)
+
+    if project:
+        return RedirectResponse(f"/projects/{project['slug']}", status_code=301)
+
+    return RedirectResponse("/projects")
 
 # =============================
 # ABOUT
