@@ -6,12 +6,13 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import smtplib
 from email.mime.text import MIMEText
-import requests
 from projects import projects_data
 
 app = FastAPI()
 
+# =============================
 # CORS
+# =============================
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -20,17 +21,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Static
+# =============================
+# STATIC
+# =============================
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
 # =============================
-
+# CACHE STATIC (tăng tốc load)
+# =============================
 from starlette.middleware.base import BaseHTTPMiddleware
 
 class CacheControlMiddleware(BaseHTTPMiddleware):
-
     async def dispatch(self, request, call_next):
 
         response = await call_next(request)
@@ -42,7 +45,6 @@ class CacheControlMiddleware(BaseHTTPMiddleware):
 
 app.add_middleware(CacheControlMiddleware)
 
-
 # =============================
 # HOME
 # =============================
@@ -50,25 +52,6 @@ app.add_middleware(CacheControlMiddleware)
 def home(request: Request):
 
     featured_projects = projects_data[:3]
-        {
-            "id": 1,
-            "name": "Casa Blanca Garden",
-            "category": "Villa garden",
-            "cover": "/static/1.jpg",
-        },
-        {
-            "id": 7,
-            "name": "VFI Office",
-            "category": "Office",
-            "cover": "/static/4.jpg",
-        },
-        {
-            "id": 9,
-            "name": "Happy Garden Retreat",
-            "category": "Resort",
-            "cover": "/static/10.jpg",
-        },
-    ]
 
     return templates.TemplateResponse(
         "home.html",
@@ -79,10 +62,11 @@ def home(request: Request):
     )
 
 # =============================
-# PROJECTS
+# PROJECTS LIST
 # =============================
 @app.get("/projects", response_class=HTMLResponse)
 def projects(request: Request):
+
     return templates.TemplateResponse(
         "projects.html",
         {
@@ -91,11 +75,13 @@ def projects(request: Request):
         }
     )
 
-
+# =============================
+# PROJECT DETAIL (SEO SLUG)
+# =============================
 @app.get("/projects/{slug}", response_class=HTMLResponse)
-def project_detail(request: Request, project_id: int):
+def project_detail(request: Request, slug: str):
 
-    project = next((p for p in projects_data if p["id"] == project_id), None)
+    project = next((p for p in projects_data if p["slug"] == slug), None)
 
     if not project:
         return templates.TemplateResponse(
@@ -112,14 +98,19 @@ def project_detail(request: Request, project_id: int):
         }
     )
 
-
+# =============================
+# REDIRECT OLD PROJECT ID
+# =============================
 @app.get("/projects/id/{project_id}")
 def redirect_old_project(project_id: int):
 
     project = next((p for p in projects_data if p["id"] == project_id), None)
 
     if project:
-        return RedirectResponse(f"/projects/{project['slug']}", status_code=301)
+        return RedirectResponse(
+            url=f"/projects/{project['slug']}",
+            status_code=301
+        )
 
     return RedirectResponse("/projects")
 
@@ -128,22 +119,26 @@ def redirect_old_project(project_id: int):
 # =============================
 @app.get("/about", response_class=HTMLResponse)
 def about(request: Request):
+
     return templates.TemplateResponse(
         "about.html",
         {"request": request}
     )
 
 # =============================
-# CONTACT
+# CONTACT PAGE
 # =============================
 @app.get("/contact", response_class=HTMLResponse)
 def contact_page(request: Request):
+
     return templates.TemplateResponse(
         "contact.html",
         {"request": request}
     )
 
-
+# =============================
+# CONTACT SUBMIT
+# =============================
 @app.post("/contact-submit")
 def contact_submit(
     background_tasks: BackgroundTasks,
@@ -156,26 +151,43 @@ def contact_submit(
     message: str = Form(...),
 ):
 
-    background_tasks.add_task(send_email_notify, name, phone, email, location, project_type, budget, message)
+    background_tasks.add_task(
+        send_email_notify,
+        name,
+        phone,
+        email,
+        location,
+        project_type,
+        budget,
+        message
+    )
 
     return RedirectResponse("/contact-success", status_code=303)
 
-
+# =============================
+# CONTACT SUCCESS
+# =============================
 @app.get("/contact-success", response_class=HTMLResponse)
 def contact_success(request: Request):
+
     return templates.TemplateResponse(
         "contact_success.html",
         {"request": request}
     )
 
+# =============================
+# NEWS
+# =============================
 @app.get("/news", response_class=HTMLResponse)
 def news(request: Request):
+
     return templates.TemplateResponse(
         "news.html",
         {"request": request}
     )
+
 # =============================
-# EMAIL
+# EMAIL SEND
 # =============================
 def send_email_notify(name, phone, email, location, project_type, budget, message):
 
