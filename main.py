@@ -49,7 +49,7 @@ app.add_middleware(CacheControlMiddleware)
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
 
-    featured_projects = [
+    featured_projects = projects_data[:3]
         {
             "id": 1,
             "name": "Casa Blanca Garden",
@@ -94,7 +94,6 @@ def projects(request: Request):
 
 @app.get("/projects/{project_id}", response_class=HTMLResponse)
 def project_detail(request: Request, project_id: int):
-    return RedirectResponse(f"/projects/{id}")
 
     project = next((p for p in projects_data if p["id"] == project_id), None)
 
@@ -111,6 +110,14 @@ def project_detail(request: Request, project_id: int):
             "request": request,
             "project": project
         }
+    )
+
+
+@app.get("/project/{project_id}")
+def redirect_project(project_id: int):
+    return RedirectResponse(
+        url=f"/projects/{project_id}",
+        status_code=301
     )
 
 # =============================
