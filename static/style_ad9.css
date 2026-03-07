@@ -271,7 +271,7 @@ input, textarea {
 /* Left: 9 images (3x3) */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
     gap: 1px;
     width: 100%;
 }
@@ -519,7 +519,7 @@ input, textarea {
 
 body {
     padding-top: 80px;     /* chỉnh theo độ cao header thực tế */
-
+}
 
 /* Căn giữa form đúng chuẩn */
 .form-wrapper {
@@ -607,24 +607,6 @@ width:100%;
 
 }
 
-/* MASONRY GALLERY */
-
-.project-grid{
-column-count:3;
-column-gap:8px;
-}
-
-.project-grid img{
-width:100%;
-margin-bottom:8px;
-border-radius:6px;
-break-inside:avoid;
-transition:transform .3s ease;
-}
-
-.project-grid img:hover{
-transform:scale(1.04);
-}
 
 /* responsive */
 
