@@ -1,0 +1,20 @@
+.project-detail-container{
+width:90%;
+max-width:1400px;
+margin:120px auto;
+}
+
+/* GALLERY */
+
+.detail-gallery{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:4px;
+}
+
+.detail-gallery img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+cursor:pointer;
+}

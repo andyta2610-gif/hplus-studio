@@ -1,0 +1,69 @@
+/* HERO */
+
+.hero-slider{
+position:relative;
+height:calc(100vh - 70px);
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+inset:0;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:opacity 2s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.hero-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+}
+
+.hero-title{
+font-size:52px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-btn{
+background:white;
+padding:14px 40px;
+border-radius:6px;
+text-decoration:none;
+color:#111;
+}
+
+/* FEATURED PROJECTS */
+
+.featured-grid{
+max-width:1300px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:50px;
+}
+
+.featured-image{
+aspect-ratio:3/2;
+overflow:hidden;
+border-radius:20px;
+}
+
+.featured-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.featured-info{
+margin-top:12px;
+}
