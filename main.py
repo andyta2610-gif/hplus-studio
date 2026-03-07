@@ -10,6 +10,7 @@ from projects import projects_data
 from dotenv import load_dotenv
 
 load_dotenv()
+
 app = FastAPI()
 
 # =============================
