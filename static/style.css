@@ -13,19 +13,31 @@ color:#111;
 padding-top:80px;
 }
 
+.logo-img{
+height:40px;
+width:auto;
+display:block;
+}
+
 /* NAVBAR */
 
 .navbar{
 position:fixed;
 top:0;
+left:0;
 width:100%;
-padding:20px 60px;
-background:rgba(255,255,255,0.7);
+height:70px;
+padding:0 60px;
+background:rgba(255,255,255,0.8);
 backdrop-filter:blur(10px);
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 z-index:1000;
+}
+
+body{
+padding-top:70px;
 }
 
 /* HERO */
