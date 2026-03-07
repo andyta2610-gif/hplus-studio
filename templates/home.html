@@ -16,44 +16,46 @@
         <div class="slide" style="background-image:url('/static/7.jpg');"></div>
         <div class="slide" style="background-image:url('/static/8.jpg');"></div>
         <div class="slide" style="background-image:url('/static/9.jpg');"></div>
-        <div class="slide" style="background-image:url('/static/10.jpg');"></div>
-        <div class="slide" style="background-image:url('/static/11.jpg');"></div>
-        <div class="slide" style="background-image:url('/static/12.jpg');"></div>
-        <div class="slide" style="background-image:url('/static/13.jpg');"></div>
     </div>
 
     <div class="hero-content">
-        <h1 class="hero-title">Kiến tạo không gian sống chất lượng.</h1>
+        <h1 class="hero-title">Kiến tạo không gian sống chất lượng.</h1>
         <a href="/contact" class="hero-btn">Đăng ký tư vấn</a>
     </div>
+
 </section>
 
+
 <!-- FEATURED PROJECTS -->
-<section class="section">
+<section class="section featured-section">
 
+    <h2 class="section-title">DỰ ÁN NỔI BẬT</h2>
 
-    <h2 class="section-title">DỰ ÁN NỔI BẬT</h2>
+    <div class="featured-grid">
 
-   <div class="featured-grid">
-    {% for p in featured_projects %}
-    <div class="featured-card">
+        {% for p in featured_projects %}
 
-    <a href="/projects/{{ p.slug }}">
-    <img src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy">
-    </a>
+        <a href="/projects/{{ p.slug }}" class="featured-card">
 
-    <h3>{{ p.title }}</h3>
-    <p>{{ p.project_type }}</p>
-      
+            <div class="featured-image">
+                <img src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy">
+            </div>
+
+            <div class="featured-info">
+                <h3>{{ p.title }}</h3>
+                <p>{{ p.project_type }}</p>
+            </div>
+
+        </a>
+
+        {% endfor %}
+
     </div>
 
-    {% endfor %}
-
-</div>
 </section>
 
 {% endblock %}
 
 {% block footer %}
-    {{ super() }}
+{{ super() }}
 {% endblock %}
