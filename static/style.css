@@ -115,7 +115,7 @@ transform:translateY(-5px);
 
 .featured-image{
 width:100%;
-aspect-ratio:1/1;
+aspect-ratio:4/3;
 overflow:hidden;
 border-radius:20px;
 }
