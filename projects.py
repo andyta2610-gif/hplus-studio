@@ -13,6 +13,7 @@ projects_data = [
         "DesignConstruct": "H2 & H+",
         "Status": "Built",
         "description": "…",
+        "featured":True,
 
         "featured_images": [
             "/static/projects/casa/1.jpg",
@@ -180,6 +181,7 @@ projects_data = [
         "DesignConstruct": "H+",
         "Status": "Built",
         "description": "…",
+        "featured":True,
 
         "featured_images": [
             "/static/projects/vfi/1.jpg",
@@ -233,6 +235,7 @@ projects_data = [
         "DesignConstruct": "H2 & H+",
         "Status": "Concept",
         "description": "…",
+        "featured":True,
 
         "featured_images": [
             "/static/projects/happy garden retreat/1.jpg",
