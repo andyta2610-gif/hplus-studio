@@ -71,6 +71,7 @@ projects_data = [
         "DesignConstruct": "H+",
         "Status": "Built",
         "description": "…",
+        "featured": True,
 
         "featured_images": [
             "/static/projects/nha_tcd/1.jpg",
@@ -209,6 +210,7 @@ projects_data = [
         "DesignConstruct": "H+",
         "Status": "Concept",
         "description": "…",
+        "featured": True,
 
         "featured_images": [
             "/static/projects/tran_xuan_do/1.jpg",

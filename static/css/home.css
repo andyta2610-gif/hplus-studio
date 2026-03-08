@@ -12,7 +12,7 @@ inset:0;
 background-size:cover;
 background-position:center;
 opacity:0;
-transition:opacity 2s;
+transition:opacity 5s;
 }
 
 .slide.active{
@@ -29,9 +29,9 @@ color:white;
 }
 
 .hero-title{
-font-size:52px;
+font-size:48px;
 line-height:1.2;
-margin-bottom:20px;
+margin-bottom:30px;
 }
 
 .hero-btn{
@@ -45,17 +45,17 @@ color:#111;
 /* FEATURED PROJECTS */
 
 .featured-grid{
-max-width:1300px;
+max-width:1600px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(5,1fr);
 gap:30px;
 }
 
 .featured-image{
 aspect-ratio:3/2;
 overflow:hidden;
-border-radius:30px;
+border-radius:10px;
 }
 
 .featured-image img{
