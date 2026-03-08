@@ -1,5 +1,13 @@
 /* RESET */
 
+/* LOGO TEXT */
+
+.logo-text{
+font-size:22px;       /* tăng kích thước */
+font-weight:500;
+letter-spacing:0.5px;
+}
+
 *{
 margin:0;
 padding:0;
