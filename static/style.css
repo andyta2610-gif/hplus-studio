@@ -80,7 +80,7 @@ max-width:1400px;
 margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:80px;
+gap:60px;
 align-items:center;
 }
 
@@ -95,8 +95,8 @@ justify-content:flex-end;
 }
 
 .footer-map iframe{
-width:420px;
-height:280px;
+width:150px;
+height:120px;
 border-radius:10px;
 border:0;
 }
