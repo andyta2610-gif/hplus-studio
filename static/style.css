@@ -76,8 +76,8 @@ color:white;
 }
 
 .hero-title{
-font-size:52px;
-max-width:900px;
+font-size:45px;
+max-width:700px;
 line-height:1.2;
 text-shadow:0 4px 10px rgba(0,0,0,0.4);
 margin-bottom:25px;
@@ -99,7 +99,7 @@ padding:80px 8%;
 }
 
 .section-title{
-font-size:34px;
+font-size:50px;
 text-align:center;
 margin-bottom:60px;
 font-weight:600;
@@ -112,7 +112,7 @@ max-width:1400px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:50px;
+gap:30px;
 }
 
 .featured-card{
@@ -129,7 +129,7 @@ transform:translateY(-5px);
 width:100%;
 aspect-ratio:4/3;
 overflow:hidden;
-border-radius:20px;
+border-radius:10px;
 }
 
 .featured-image img{
