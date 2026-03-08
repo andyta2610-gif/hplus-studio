@@ -108,7 +108,7 @@ font-weight:600;
 /* FEATURED PROJECTS */
 
 .featured-grid{
-max-width:1400px;
+max-width:1600px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
