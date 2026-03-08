@@ -49,13 +49,13 @@ max-width:1300px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:50px;
+gap:30px;
 }
 
 .featured-image{
 aspect-ratio:3/2;
 overflow:hidden;
-border-radius:20px;
+border-radius:30px;
 }
 
 .featured-image img{
@@ -65,5 +65,5 @@ object-fit:cover;
 }
 
 .featured-info{
-margin-top:12px;
+margin-top:10px;
 }
