@@ -54,8 +54,10 @@ app.add_middleware(CacheControlMiddleware)
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
 
+    # lấy project featured
     featured_projects = [p for p in projects_data if p.get("featured")]
 
+    # chỉ lấy 3 project
     featured_projects = featured_projects[:3]
 
     return templates.TemplateResponse(
