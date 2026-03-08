@@ -48,7 +48,7 @@ color:#111;
 max-width:1600px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(5,1fr);
+grid-template-columns:repeat(3,1fr);
 gap:30px;
 }
 
