@@ -40,6 +40,7 @@ projects_data = [
         "Area": "300m2",
         "Year": "2025",
         "Design": "H+",
+        "Generalcontractor":,
         "Status": "Concept",
         "description": "…",
 
@@ -98,6 +99,7 @@ projects_data = [
         "Area": "70m2",
         "Year": "2021",
         "Design": "H2 & H+",
+        "Generalcontractor":,
         "Status": "Concept",
         "description": "…",
 
@@ -152,7 +154,8 @@ projects_data = [
         "project_type": "Townhouse",
         "Area": "300m2",
         "Year": "2023",
-        "Design": "H2 & H+",
+        "Design": "H+",
+        "Generalcontractor":,
         "Status": "Concept",
         "description": "…",
 
@@ -179,7 +182,8 @@ projects_data = [
         "project_type": "Coffee shop",
         "Area": "150m2",
         "Year": "2023",
-        "Design": "H2 & H+",
+        "Design": "H+",
+        "Generalcontractor":,
         "Status": "Concept",
         "description": "…",
 
@@ -206,7 +210,7 @@ projects_data = [
         "project_type": "Office",
         "Area": "1000m2",
         "Year": "2023",
-        "Design": "H2 & H+",
+        "Design": "H+",
         "Generalcontractor": "H+",
         "Status": "Built",
         "description": "…",
@@ -235,7 +239,8 @@ projects_data = [
         "project_type": "Townhouse",
         "Area": "160m2",
         "Year": "2023",
-        "Design": "H2 & H+",
+        "Design": "H+",
+        "Generalcontractor":,
         "Status": "Concept",
         "description": "…",
 
