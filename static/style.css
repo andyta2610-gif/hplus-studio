@@ -142,7 +142,7 @@ padding:120px 20px;
 }
 
 .about-wrapper{
-max-width:900px;
+max-width:600px;
 margin:auto;
 }
 
@@ -153,13 +153,10 @@ margin-bottom:60px;
 text-align:center;
 }
 
-.about-content{
+.about-content p{
 font-size:18px;
 line-height:2;
 color:#222;
-}
-
-.about-content p{
 margin-bottom:32px;
 text-indent:40px;
 }
