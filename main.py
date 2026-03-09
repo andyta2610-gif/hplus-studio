@@ -225,3 +225,15 @@ Message:
     server.login(sender, password)
     server.sendmail(sender, receiver, msg.as_string())
     server.quit()
+
+
+@app.get("/news", response_class=HTMLResponse)
+def news(request: Request):
+
+    return templates.TemplateResponse(
+        "news.html",
+        {
+            "request": request,
+            "news": news_data
+        }
+    )

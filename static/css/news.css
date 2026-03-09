@@ -1,0 +1,24 @@
+.news-list{
+max-width:900px;
+margin:50px auto;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.news-item a{
+font-size:20px;
+font-weight:600;
+text-decoration:none;
+color:#111;
+}
+
+.news-item a:hover{
+text-decoration:underline;
+}
+
+.news-source{
+font-size:14px;
+color:#777;
+margin-top:5px;
+}
