@@ -236,7 +236,6 @@ projects_data = [
         "Area": "160m2",
         "Year": "2023",
         "Design": "H+",
-        "Generalcontractor": None,
         "Status": "Concept",
         "description": "…",
 
