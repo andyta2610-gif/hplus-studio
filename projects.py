@@ -113,7 +113,7 @@ projects_data = [
             "/static/projects/dongho_kg/9.jpg",
         ],
 
-        "images": [f"/static/projects/dongho_kg/{i}.jpg" for i in range(1, 35)]
+        "images": [f"/static/projects/dongho_kg/{i}.jpg" for i in range(1, 34)]
     },
 
     # -----------------------------------------------------
@@ -169,7 +169,7 @@ projects_data = [
             "/static/projects/thanhoai_house/9.jpg",
         ],
 
-        "images": [f"/static/projects/thanhoai_house/{i}.jpg" for i in range(1, 14)]
+        "images": [f"/static/projects/thanhoai_house/{i}.jpg" for i in range(1, 13)]
     },
   # -----------------------------------------------------
     {
@@ -334,6 +334,8 @@ projects_data = [
 
         "images": [f"/static/projects/daian_apartment/{i}.jpg" for i in range(1, 17)]
     },
+
+
 ]
 
 

@@ -3,22 +3,21 @@
 
 <section class="section">
 
-<h1 class="section-title">Tin Tức Chuyên Ngành</h1>
+<h2 class="section-title">Tin Tức Chuyên Ngành</h2>
 
 <div class="news-grid">
 
 {% for n in news_list %}
+<a href="{{n.link}}" target="_blank" class="news-card">
 
-<a href="{{ n.url }}" target="_blank" class="news-card">
+<img src="{{n.image}}" alt="{{n.title}}">
 
-<img src="{{ n.thumbnail }}">
-
-<h3>{{ n.title }}</h3>
-
-<p>{{ n.source }} • {{ n.date }}</p>
+<div class="news-info">
+<h3>{{n.title}}</h3>
+<p>{{n.source}} • {{n.year}}</p>
+</div>
 
 </a>
-
 {% endfor %}
 
 </div>
