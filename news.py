@@ -1,17 +1,30 @@
 news_data = [
-    {
-        "title": "Xu hướng kiến trúc xanh năm 2026",
-        "link": "https://vnexpress.net/kien-truc-xanh-2026",
-        "source": "VNExpress"
-    },
-    {
-        "title": "10 công trình kiến trúc đẹp nhất Việt Nam",
-        "link": "https://cafeland.vn/kien-truc-dep-viet-nam",
-        "source": "CafeLand"
-    },
-    {
-        "title": "Minimal Architecture đang trở thành xu hướng",
-        "link": "https://archdaily.com/minimal-architecture",
-        "source": "ArchDaily"
-    }
+
+{
+"id":1,
+"title":"Xu hướng thiết kế villa nhiệt đới 2025",
+"date":"2025",
+"source":"ArchDaily",
+"url":"https://www.archdaily.com/",
+"thumbnail":"/static/news/1.jpg"
+},
+
+{
+"id":2,
+"title":"Kiến trúc sinh thái trong resort",
+"date":"2024",
+"source":"Dezeen",
+"url":"https://www.dezeen.com/",
+"thumbnail":"/static/news/2.jpg"
+},
+
+{
+"id":3,
+"title":"Thiết kế nhà vườn hiện đại",
+"date":"2024",
+"source":"DesignBoom",
+"url":"https://www.designboom.com/",
+"thumbnail":"/static/news/3.jpg"
+}
+
 ]

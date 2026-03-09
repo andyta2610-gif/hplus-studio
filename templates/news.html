@@ -1,24 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="news-list">
+<section class="section">
 
-{% for item in news %}
+<h1 class="section-title">Tin Tức Chuyên Ngành</h1>
 
-<div class="news-item">
+<div class="news-grid">
 
-<a href="{{ item.link }}" target="_blank">
-{{ item.title }}
+{% for n in news_list %}
+
+<a href="{{ n.url }}" target="_blank" class="news-card">
+
+<img src="{{ n.thumbnail }}">
+
+<h3>{{ n.title }}</h3>
+
+<p>{{ n.source }} • {{ n.date }}</p>
+
 </a>
-
-<div class="news-source">
-Nguồn: {{ item.source }}
-</div>
-
-</div>
 
 {% endfor %}
 
 </div>
+
+</section>
 
 {% endblock %}
