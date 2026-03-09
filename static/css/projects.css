@@ -1,7 +1,7 @@
 .projects-page{
 width:90%;
 max-width:1400px;
-margin:120px auto;
+margin:100px auto;
 display:flex;
 flex-direction:column;
 gap:120px;
@@ -40,11 +40,28 @@ transition:.3s;
 
 .project-info{
 flex:3;
+font-size:18px;
+line-height:1.9;
+max-width:420px;
 }
 
 .project-info h2{
 font-size:28px;
 margin-bottom:10px;
+font-weight:550
+}
+
+.project-info h1{
+font-size:28px;
+margin-bottom:10px;
+font-weight:550
+}
+
+.project-info p{
+margin-bottom:12px;
+font-size:18px;
+font-weight:400
+
 }
 
 /* MORE BUTTON */

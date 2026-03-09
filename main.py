@@ -8,6 +8,7 @@ import smtplib
 from email.mime.text import MIMEText
 from projects import projects_data
 from dotenv import load_dotenv
+from news import news_data
 
 load_dotenv()
 
