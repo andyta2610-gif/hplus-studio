@@ -1,4 +1,5 @@
 import os
+from news import news_data
 from fastapi import FastAPI, Request, Form, BackgroundTasks
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
@@ -8,7 +9,6 @@ import smtplib
 from email.mime.text import MIMEText
 from projects import projects_data
 from dotenv import load_dotenv
-from news import news_data
 
 load_dotenv()
 
@@ -191,9 +191,11 @@ def news(request: Request):
 
     return templates.TemplateResponse(
         "news.html",
-        {"request": request}
+        {
+            "request": request,
+            "news": news_data
+        }
     )
-
 # =============================
 # EMAIL SEND
 # =============================
@@ -228,13 +230,3 @@ Message:
     server.quit()
 
 
-@app.get("/news", response_class=HTMLResponse)
-def news(request: Request):
-
-    return templates.TemplateResponse(
-        "news.html",
-        {
-            "request": request,
-            "news": news_data
-        }
-    )

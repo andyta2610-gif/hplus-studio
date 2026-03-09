@@ -137,14 +137,29 @@ padding:60px 20px;
 
 }
 
-.about-text{
-max-width:900px;
-margin:auto;
-font-size:16px;
-line-height:1.8;
+.about-section{
+padding:120px 20px;
 }
 
-.about-text p{
-margin-bottom:25px;
+.about-wrapper{
+max-width:900px;
+margin:auto;
+}
+
+.about-title{
+font-size:42px;
+font-weight:600;
+margin-bottom:60px;
+text-align:center;
+}
+
+.about-content{
+font-size:18px;
+line-height:2;
+color:#222;
+}
+
+.about-content p{
+margin-bottom:32px;
 text-indent:40px;
 }
