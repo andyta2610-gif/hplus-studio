@@ -10,7 +10,8 @@ projects_data = [
         "project_type": "Villa garden",
         "Area": "500m2",
         "Year": "2024",
-        "DesignConstruct": "H2 & H+",
+        "Design": "H2 & H+",
+        "Generalcontractor": "H+",
         "Status": "Built",
         "description": "…",
         "featured": True,
@@ -38,7 +39,7 @@ projects_data = [
         "project_type": "villa garden",
         "Area": "300m2",
         "Year": "2025",
-        "DesignConstruct": "H+",
+        "Design": "H+",
         "Status": "Concept",
         "description": "…",
 
@@ -68,7 +69,8 @@ projects_data = [
         "project_type": "Townhouse",
         "Area": "200m2",
         "Year": "2025",
-        "DesignConstruct": "H+",
+        "Design": "H2 & H+",
+        "Generalcontractor": "H+",
         "Status": "Built",
         "description": "…",
 
@@ -88,7 +90,6 @@ projects_data = [
     },
 
     # -----------------------------------------------------
-
     {
         "id": 4,
         "slug": "thao-dien-arpartment",
@@ -96,7 +97,7 @@ projects_data = [
         "project_type": "Apartment",
         "Area": "70m2",
         "Year": "2021",
-        "DesignConstruct": "H+",
+        "Design": "H2 & H+",,
         "Status": "Concept",
         "description": "…",
 
@@ -115,16 +116,43 @@ projects_data = [
         "images": [f"/static/projects/thao_dien_apartment/{i}.jpg" for i in range(1, 11)]
     },
 
-   # -----------------------------------------------------
-
+    # -----------------------------------------------------
     {
         "id": 5,
+        "slug": "happy-garden-retreat",
+        "title": "Happy Garden Retreat",
+        "project_type": "resort",
+        "Area": "3000m2",
+        "Year": "2025",
+        "Design": "H2 & H+",
+        "Status": "Concept",
+        "description": "…",
+        "featured": True,
+
+        "featured_images": [
+            "/static/projects/happy garden retreat/1.jpg",
+            "/static/projects/happy garden retreat/2.jpg",
+            "/static/projects/happy garden retreat/3.jpg",
+            "/static/projects/happy garden retreat/4.jpg",
+            "/static/projects/happy garden retreat/5.jpg",
+            "/static/projects/happy garden retreat/6.jpg",
+            "/static/projects/happy garden retreat/7.jpg",
+            "/static/projects/happy garden retreat/8.jpg",
+            "/static/projects/happy garden retreat/9.jpg",
+        ],
+
+        "images": [f"/static/projects/happy garden retreat/{i}.jpg" for i in range(1, 20)]
+    },
+
+    # -----------------------------------------------------
+    {
+        "id": 6,
         "slug": "vung-tau-sunset",
         "title": "Vũng Tàu Sunset",
         "project_type": "Townhouse",
         "Area": "300m2",
         "Year": "2023",
-        "DesignConstruct": "H+",
+        "Design": ""H2 & H+",
         "Status": "Concept",
         "description": "…",
 
@@ -145,13 +173,13 @@ projects_data = [
     },
   # -----------------------------------------------------
     {
-        "id": 6,
+        "id": 7,
         "slug": "moon-cafe",
         "title": "Moon Café",
         "project_type": "Coffee shop",
         "Area": "150m2",
-        "Year": "2022",
-        "DesignConstruct": "H+",
+        "Year": "2023",
+        "Design": ""H2 & H+",
         "Status": "Concept",
         "description": "…",
 
@@ -172,13 +200,14 @@ projects_data = [
 
     # -----------------------------------------------------
     {
-        "id": 7,
+        "id": 8,
         "slug": "vif-office",
         "title": "Tập Đoàn VFI",
         "project_type": "Office",
         "Area": "1000m2",
-        "Year": "2021",
-        "DesignConstruct": "H+",
+        "Year": "2023",
+        "Design": "H2 & H+",
+        "Generalcontractor": "H+",
         "Status": "Built",
         "description": "…",
         "featured": True,
@@ -200,13 +229,13 @@ projects_data = [
 
     # -----------------------------------------------------
     {
-        "id": 8,
+        "id": 9,
         "slug": "tran-xuan-do-house",
         "title": "Trần Xuân Độ House",
         "project_type": "Townhouse",
         "Area": "160m2",
         "Year": "2023",
-        "DesignConstruct": "H+",
+        "Design": "H2 & H+",
         "Status": "Concept",
         "description": "…",
 
@@ -224,33 +253,7 @@ projects_data = [
 
         "images": [f"/static/projects/tran_xuan_do/{i}.jpg" for i in range(1, 18)]
     },
-    # -----------------------------------------------------
-    {
-        "id": 9,
-        "slug": "happy-garden-retreat",
-        "title": "Happy Garden Retreat",
-        "project_type": "resort",
-        "Area": "3000m2",
-        "Year": "2025",
-        "DesignConstruct": "H2 & H+",
-        "Status": "Concept",
-        "description": "…",
-        "featured": True,
 
-        "featured_images": [
-            "/static/projects/happy garden retreat/1.jpg",
-            "/static/projects/happy garden retreat/2.jpg",
-            "/static/projects/happy garden retreat/3.jpg",
-            "/static/projects/happy garden retreat/4.jpg",
-            "/static/projects/happy garden retreat/5.jpg",
-            "/static/projects/happy garden retreat/6.jpg",
-            "/static/projects/happy garden retreat/7.jpg",
-            "/static/projects/happy garden retreat/8.jpg",
-            "/static/projects/happy garden retreat/9.jpg",
-        ],
-
-        "images": [f"/static/projects/happy garden retreat/{i}.jpg" for i in range(1, 20)]
-    },
 ]
 
 
