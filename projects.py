@@ -40,7 +40,7 @@ projects_data = [
         "Area": "300m2",
         "Year": "2025",
         "Design": "H+",
-        "Generalcontractor":,
+        "Generalcontractor": None,
         "Status": "Concept",
         "description": "…",
 
@@ -99,7 +99,7 @@ projects_data = [
         "Area": "70m2",
         "Year": "2021",
         "Design": "H2 & H+",
-        "Generalcontractor":,
+        "Generalcontractor": None,
         "Status": "Concept",
         "description": "…",
 
@@ -127,6 +127,7 @@ projects_data = [
         "Area": "3000m2",
         "Year": "2025",
         "Design": "H2 & H+",
+        "Generalcontractor": None,
         "Status": "Concept",
         "description": "…",
         "featured": True,
@@ -155,7 +156,7 @@ projects_data = [
         "Area": "300m2",
         "Year": "2023",
         "Design": "H+",
-        "Generalcontractor":,
+        "Generalcontractor": None,
         "Status": "Concept",
         "description": "…",
 
@@ -183,7 +184,7 @@ projects_data = [
         "Area": "150m2",
         "Year": "2023",
         "Design": "H+",
-        "Generalcontractor":,
+        "Generalcontractor": None,
         "Status": "Concept",
         "description": "…",
 
@@ -240,7 +241,7 @@ projects_data = [
         "Area": "160m2",
         "Year": "2023",
         "Design": "H+",
-        "Generalcontractor":,
+        "Generalcontractor": None,
         "Status": "Concept",
         "description": "…",
 
