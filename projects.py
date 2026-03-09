@@ -337,7 +337,7 @@ projects_data = [
 # -----------------------------------------------------
     {
         "id": 13,
-        "slug": "lvh_apartment",
+        "slug": "lvh",
         "title": "Lê Văn Huân Apartment",
         "Project_type": "Apartment",
         "Area": "150m2",
@@ -350,7 +350,7 @@ projects_data = [
             "/static/projects/lvh/1.jpg",
             "/static/projects/lvh/2.jpg",
             "/static/projects/lvh/3.jpg",
-            "/static/projects/lvh4.jpg",
+            "/static/projects/lvh/4.jpg",
             "/static/projects/lvh/5.jpg",
             "/static/projects/lvh/6.jpg",
             "/static/projects/lvh/7.jpg",
@@ -358,7 +358,7 @@ projects_data = [
             "/static/projects/lvh/9.jpg",
         ],
 
-        "images": [f"/static/projects/daian_apartment/{i}.jpg" for i in range(1, 28)]
+        "images": [f"/static/projects/lvh/{i}.jpg" for i in range(1, 28)]
     },
 
 

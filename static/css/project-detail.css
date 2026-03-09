@@ -5,7 +5,7 @@ PROJECT DETAIL CONTAINER
 .project-detail-container{
 max-width:1200px;
 margin:auto;
-padding:80px 20px;
+padding:50px 10px;
 }
 
 
@@ -19,8 +19,8 @@ margin-bottom:40px;
 }
 
 .detail-info h1{
-font-size:40px;
-font-weight:600;
+font-size:28px;
+font-weight:550;
 margin-bottom:20px;
 }
 
