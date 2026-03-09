@@ -97,7 +97,7 @@ projects_data = [
         "project_type": "Apartment",
         "Area": "70m2",
         "Year": "2021",
-        "Design": "H2 & H+",,
+        "Design": "H2 & H+",
         "Status": "Concept",
         "description": "…",
 
@@ -179,7 +179,7 @@ projects_data = [
         "project_type": "Coffee shop",
         "Area": "150m2",
         "Year": "2023",
-        "Design": ""H2 & H+",
+        "Design": "H2 & H+",
         "Status": "Concept",
         "description": "…",
 
