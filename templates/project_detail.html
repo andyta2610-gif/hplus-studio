@@ -16,7 +16,7 @@
         <p class="detail-desc">{{ project.description }}</p>
     </div>
 
-    <div class="detail-gallery">
+    <div class="project-gallery">
         {% for img in project.images %}
             <a href="{{img}}" class="gallery-item">
             <img src="{{img}}" alt="">
@@ -36,5 +36,49 @@
     <span class="next" onclick="changeImg(1)">&#10095;</span>
 </div>
 
+
+<!-- JS đặt ở đây -->
+
+<script>
+
+let currentIndex = 0
+let images = []
+
+document.querySelectorAll(".gallery-item img").forEach((img,i)=>{
+images.push(img.src)
+
+img.addEventListener("click",function(e){
+e.preventDefault()
+openLightbox(i)
+})
+})
+
+function openLightbox(index){
+currentIndex=index
+document.getElementById("lightbox").style.display="flex"
+document.getElementById("lightbox-img").src=images[index]
+}
+
+function closeLightbox(){
+document.getElementById("lightbox").style.display="none"
+}
+
+function changeImg(step){
+
+currentIndex+=step
+
+if(currentIndex<0){
+currentIndex=images.length-1
+}
+
+if(currentIndex>=images.length){
+currentIndex=0
+}
+
+document.getElementById("lightbox-img").src=images[currentIndex]
+
+}
+
+</script>
 {% endblock %}
 

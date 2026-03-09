@@ -31,7 +31,7 @@ news_data = [
 "id":4,
 "title":"Đại An Apartment",
 "year":"2023",
-"source":"Archdaily",
+"source":"Kiến Việt",
 "link":"https://kienviet.net/2020/11/22/dai-an-apartment-nhung-khoi-hop-bungalow-da-sac-mau-h-2-architects",
 "image":"/static/news/4.jpg"
 },
