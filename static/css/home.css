@@ -47,7 +47,7 @@ color:#111;
 
 .featured-grid{
 max-width:1600px;
-margin:60px;
+margin:0 auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:50px;
@@ -60,7 +60,7 @@ transition:.3s;
 }
 
 .featured-image{
-aspect-ratio:3/2;
+aspect-ratio:4/3;
 overflow:hidden;
 border-radius:12px;
 }
