@@ -79,6 +79,12 @@ document.getElementById("lightbox-img").src=images[currentIndex]
 
 }
 
+
+document.getElementById("lightbox").onclick=function(e){
+if(e.target.id==="lightbox"){
+closeLightbox()
+}
+}
 </script>
 {% endblock %}
 

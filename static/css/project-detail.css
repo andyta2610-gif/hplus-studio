@@ -86,16 +86,28 @@ align-items:center;
 
 .lightbox img{
 max-width:90%;
-max-height:90%;
+max-height:60%;
 }
 
 .close{
 position:absolute;
-top:30px;
-right:40px;
-font-size:40px;
+top:25px;
+right:35px;
+font-size:42px;
 color:white;
 cursor:pointer;
+background:rgba(0,0,0,0.6);
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+transition:0.3s;
+}
+
+.close:hover{
+background:rgba(255,255,255,0.2);
 }
 
 .prev,

@@ -327,7 +327,7 @@ projects_data = [
             "/static/projects/daian_apartment/4.jpg",
             "/static/projects/daian_apartment/5.jpg",
             "/static/projects/daian_apartment/6.jpg",
-            "/static/projects/daian_partment/7.jpg",
+            "/static/projects/daian_apartment/7.jpg",
             "/static/projects/daian_apartment/8.jpg",
             "/static/projects/daian_apartment/9.jpg",
         ],
@@ -337,7 +337,7 @@ projects_data = [
 # -----------------------------------------------------
     {
         "id": 13,
-        "slug": "lvh",
+        "slug": "levanhuan",
         "title": "Lê Văn Huân Apartment",
         "Project_type": "Apartment",
         "Area": "150m2",
@@ -347,18 +347,18 @@ projects_data = [
         "description": "…",
 
         "featured_images": [
-            "/static/projects/lvh/1.jpg",
-            "/static/projects/lvh/2.jpg",
-            "/static/projects/lvh/3.jpg",
-            "/static/projects/lvh/4.jpg",
-            "/static/projects/lvh/5.jpg",
-            "/static/projects/lvh/6.jpg",
-            "/static/projects/lvh/7.jpg",
-            "/static/projects/lvh/8.jpg",
-            "/static/projects/lvh/9.jpg",
+            "/static/projects/levanhuan/1.jpg",
+            "/static/projects/levanhuan/2.jpg",
+            "/static/projects/levanhuan/3.jpg",
+            "/static/projects/levanhuan/4.jpg",
+            "/static/projects/levanhuan/5.jpg",
+            "/static/projects/levanhuan/6.jpg",
+            "/static/projects/levanhuan/7.jpg",
+            "/static/projects/levanhuan/8.jpg",
+            "/static/projects/levanhuan/9.jpg",
         ],
 
-        "images": [f"/static/projects/lvh/{i}.jpg" for i in range(1, 28)]
+        "images": [f"/static/projects/levanhuan/{i}.jpg" for i in range(1, 28)]
     },
 
 
