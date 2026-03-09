@@ -193,7 +193,7 @@ def news(request: Request):
         "news.html",
         {
             "request": request,
-            "news": news_data
+            "news_list": news_data
         }
     )
 # =============================

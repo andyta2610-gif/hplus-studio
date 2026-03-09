@@ -92,28 +92,28 @@ projects_data = [
     # -----------------------------------------------------
     {
         "id": 4,
-        "slug": "thao-dien-arpartment",
-        "title": "Thảo Điền Apartment",
-        "Project_type": "Apartment",
-        "Area": "70m2",
-        "Year": "2021",
+        "slug": "dongho_kg",
+        "title": "Đông Hồ Kiên Giang Resort",
+        "Project_type": "resort",
+        "Area": "15000m2",
+        "Year": "2025",
         "Design": "H2 & H+",
         "Status": "Concept",
         "description": "…",
 
         "featured_images": [
-            "/static/projects/thao_dien_apartment/1.jpg",
-            "/static/projects/thao_dien_apartment/2.jpg",
-            "/static/projects/thao_dien_apartment/3.jpg",
-            "/static/projects/thao_dien_apartment/4.jpg",
-            "/static/projects/thao_dien_apartment/5.jpg",
-            "/static/projects/thao_dien_apartment/6.jpg",
-            "/static/projects/thao_dien_apartment/7.jpg",
-            "/static/projects/thao_dien_apartment/8.jpg",
-            "/static/projects/thao_dien_apartment/9.jpg",
+            "/static/projects/dongho_kg/1.jpg",
+            "/static/projects/dongho_kg/2.jpg",
+            "/static/projects/dongho_kg/3.jpg",
+            "/static/projects/dongho_kg/4.jpg",
+            "/static/projects/dongho_kg/5.jpg",
+            "/static/projects/dongho_kg/6.jpg",
+            "/static/projects/dongho_kg/7.jpg",
+            "/static/projects/dongho_kg/8.jpg",
+            "/static/projects/dongho_kg/9.jpg",
         ],
 
-        "images": [f"/static/projects/thao_dien_apartment/{i}.jpg" for i in range(1, 11)]
+        "images": [f"/static/projects/dongho_kg/{i}.jpg" for i in range(1, 35)]
     },
 
     # -----------------------------------------------------
@@ -147,7 +147,34 @@ projects_data = [
     # -----------------------------------------------------
     {
         "id": 6,
-        "slug": "vung-tau-sunset",
+        "slug": "thanhoai_house",
+        "title": "Thanh Oai House",
+        "Project_type": "Townhouse",
+        "Area": "200m2",
+        "Year": "2025",
+        "Design": "H2 & H+",
+        "Status": "Concept",
+        "description": "…",
+
+
+        "featured_images": [
+            "/static/projects/thanhoai_house/1.jpg",
+            "/static/projects/thanhoai_house/2.jpg",
+            "/static/projects/thanhoai_house/3.jpg",
+            "/static/projects/thanhoai_house/4.jpg",
+            "/static/projects/thanhoai_house/5.jpg",
+            "/static/projects/thanhoai_house/6.jpg",
+            "/static/projects/thanhoai_house/7.jpg",
+            "/static/projects/thanhoai_house/8.jpg",
+            "/static/projects/thanhoai_house/9.jpg",
+        ],
+
+        "images": [f"/static/projects/thanhoai_house/{i}.jpg" for i in range(1, 14)]
+    },
+  # -----------------------------------------------------
+    {
+        "id": 7,
+        "slug": "vt_sunset",
         "title": "Vũng Tàu Sunset",
         "Project_type": "Townhouse",
         "Area": "300m2",
@@ -173,7 +200,7 @@ projects_data = [
     },
   # -----------------------------------------------------
     {
-        "id": 7,
+        "id": 8,
         "slug": "moon-cafe",
         "title": "Moon Café",
         "Project_type": "Coffee shop",
@@ -200,7 +227,7 @@ projects_data = [
 
     # -----------------------------------------------------
     {
-        "id": 8,
+        "id": 9,
         "slug": "vif-office",
         "title": "Tập Đoàn VFI",
         "Project_type": "Office",
@@ -229,7 +256,7 @@ projects_data = [
 
     # -----------------------------------------------------
     {
-        "id": 9,
+        "id": 10,
         "slug": "tran-xuan-do-house",
         "title": "Trần Xuân Độ House",
         "Project_type": "Townhouse",
@@ -253,7 +280,60 @@ projects_data = [
 
         "images": [f"/static/projects/tran_xuan_do/{i}.jpg" for i in range(1, 18)]
     },
+# -----------------------------------------------------
+    {
+        "id": 11,
+        "slug": "thao-dien-arpartment",
+        "title": "Thảo Điền Apartment",
+        "Project_type": "Apartment",
+        "Area": "70m2",
+        "Year": "2023",
+        "Design": "H2 & H+",
+        "Status": "Concept",
+        "description": "…",
 
+        "featured_images": [
+            "/static/projects/thao_dien_apartment/1.jpg",
+            "/static/projects/thao_dien_apartment/2.jpg",
+            "/static/projects/thao_dien_apartment/3.jpg",
+            "/static/projects/thao_dien_apartment/4.jpg",
+            "/static/projects/thao_dien_apartment/5.jpg",
+            "/static/projects/thao_dien_apartment/6.jpg",
+            "/static/projects/thao_dien_apartment/7.jpg",
+            "/static/projects/thao_dien_apartment/8.jpg",
+            "/static/projects/thao_dien_apartment/9.jpg",
+        ],
+
+        "images": [f"/static/projects/thao_dien_apartment/{i}.jpg" for i in range(1, 11)]
+    },
+
+# -----------------------------------------------------
+    {
+        "id": 12,
+        "slug": "daian_arpartment",
+        "title": "Đại An Apartment",
+        "Project_type": "Apartment",
+        "Area": "70m2",
+        "Year": "2021",
+        "Design": "H2",
+        "Generalcontractor": "H+",
+        "Status": "Concept",
+        "description": "…",
+
+        "featured_images": [
+            "/static/projects/daian_apartment/1.jpg",
+            "/static/projects/daian_apartment/2.jpg",
+            "/static/projects/daian_apartment/3.jpg",
+            "/static/projects/daian_apartment/4.jpg",
+            "/static/projects/tdaian_apartment/5.jpg",
+            "/static/projects/daian_apartment/6.jpg",
+            "/static/projects/daian_partment/7.jpg",
+            "/static/projects/daian_apartment/8.jpg",
+            "/static/projects/daian_apartment/9.jpg",
+        ],
+
+        "images": [f"/static/projects/daian_apartment/{i}.jpg" for i in range(1, 17)]
+    },
 ]
 
 
