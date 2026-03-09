@@ -152,7 +152,7 @@ projects_data = [
         "project_type": "Townhouse",
         "Area": "300m2",
         "Year": "2023",
-        "Design": ""H2 & H+",
+        "Design": "H2 & H+",
         "Status": "Concept",
         "description": "…",
 
