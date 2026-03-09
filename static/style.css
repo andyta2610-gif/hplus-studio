@@ -84,10 +84,16 @@ gap:10px;
 align-items:center;
 }
 
-.footer-info{
-font-size:17px;
+.footer-info a{
+font-size:18px;
 line-height:1.8;
 align-items:center;
+text-decoration:none;
+color:#111;
+}
+
+.footer-info a:hover{
+text-decoration:scale(1.05);;
 }
 
 .footer-map{
