@@ -325,7 +325,7 @@ projects_data = [
             "/static/projects/daian_apartment/2.jpg",
             "/static/projects/daian_apartment/3.jpg",
             "/static/projects/daian_apartment/4.jpg",
-            "/static/projects/tdaian_apartment/5.jpg",
+            "/static/projects/daian_apartment/5.jpg",
             "/static/projects/daian_apartment/6.jpg",
             "/static/projects/daian_partment/7.jpg",
             "/static/projects/daian_apartment/8.jpg",
@@ -333,6 +333,32 @@ projects_data = [
         ],
 
         "images": [f"/static/projects/daian_apartment/{i}.jpg" for i in range(1, 17)]
+    },
+# -----------------------------------------------------
+    {
+        "id": 13,
+        "slug": "lvh_apartment",
+        "title": "Lê Văn Huân Apartment",
+        "Project_type": "Apartment",
+        "Area": "150m2",
+        "Year": "2020",
+        "Design": "H+",
+        "Status": "Concept",
+        "description": "…",
+
+        "featured_images": [
+            "/static/projects/lvh/1.jpg",
+            "/static/projects/lvh/2.jpg",
+            "/static/projects/lvh/3.jpg",
+            "/static/projects/lvh4.jpg",
+            "/static/projects/lvh/5.jpg",
+            "/static/projects/lvh/6.jpg",
+            "/static/projects/lvh/7.jpg",
+            "/static/projects/lvh/8.jpg",
+            "/static/projects/lvh/9.jpg",
+        ],
+
+        "images": [f"/static/projects/daian_apartment/{i}.jpg" for i in range(1, 28)]
     },
 
 

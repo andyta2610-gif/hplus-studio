@@ -18,7 +18,9 @@
 
     <div class="detail-gallery">
         {% for img in project.images %}
-            <img src="{{ img }}" class="thumb" onclick="openLightbox({{ loop.index0 }})">
+            <a href="{{img}}" class="gallery-item">
+            <img src="{{img}}" alt="">
+            </a>
         {% endfor %}
     </div>
 

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/static/css/project-detail.css?v=11">
     <link rel="stylesheet" href="/static/css/contact.css?v=11"
     <link rel="stylesheet" href="/static/css/news.css?v=6" 
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
@@ -41,12 +42,12 @@
     </script>
 </head>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
-AOS.init({
-duration:800,
-once:true
+const lightbox = GLightbox({
+selector: '.gallery-item'
 });
 </script>
 

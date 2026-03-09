@@ -1,30 +1,18 @@
-.project-detail-container{
-max-width:1400px;
-margin:120px auto;
-padding:0 5%;
-}
-
-.project-header{
-margin-bottom:40px;
-}
-
-.project-title{
-font-size:32px;
-font-weight:600;
-margin-bottom:6px;
-}
-
-/* gallery */
-
-.detail-gallery{
+.project-gallery{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:6px;
+gap:12px;
+margin-top:40px;
 }
 
-.detail-gallery img{
+.gallery-item img{
 width:100%;
-aspect-ratio:4/3;
+height:200px;
 object-fit:cover;
+transition:0.3s;
 cursor:pointer;
+}
+
+.gallery-item:hover img{
+transform:scale(1.03);
 }
