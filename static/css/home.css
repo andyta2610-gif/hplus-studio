@@ -29,7 +29,7 @@ color:white;
 }
 
 .hero-title{
-font-size:48px;
+font-size:52px;
 line-height:1.2;
 margin-bottom:30px;
 text-shadow:0 4px 10px rgba(0,0,0,0.4);
@@ -46,11 +46,11 @@ color:#111;
 /* FEATURED PROJECTS */
 
 .featured-grid{
-max-width:1600px;
+max-width:1500px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px;
+gap:50px;
 }
 
 .featured-card{
@@ -60,7 +60,7 @@ transition:.3s;
 }
 
 .featured-card:hover{
-transform:translateY(-5px);
+transform:translateY(0px);
 }
 
 .featured-image{
