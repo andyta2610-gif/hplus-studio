@@ -91,3 +91,38 @@ opacity:1;
 .project-grid-wrapper:hover img{
 filter:brightness(.7);
 }
+
+@media (max-width:768px){
+
+.project-detail-container{
+padding:40px 20px;
+}
+
+.detail-info{
+max-width:100%;
+}
+
+.detail-info h1{
+font-size:30px;
+}
+
+.project-gallery{
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+
+.gallery-item img{
+height:150px;
+}
+
+}
+
+@media (max-width:768px){
+
+.more-button{
+width:120px;
+height:120px;
+font-size:14px;
+}
+
+}
