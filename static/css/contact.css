@@ -41,7 +41,7 @@ box-shadow:0 0 0 2px rgba(0,0,0,0.05);
 }
 
 .contact-form button{
-width:160px;
+width:100%;
 padding:12px;
 background:#222;
 color:white;

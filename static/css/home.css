@@ -46,7 +46,7 @@ color:#111;
 /* FEATURED PROJECTS */
 
 .featured-grid{
-max-width:100%;
+max-width:1600px;
 margin:60px;
 display:grid;
 grid-template-columns:repeat(3,1fr);
