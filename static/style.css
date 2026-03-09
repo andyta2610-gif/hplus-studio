@@ -87,6 +87,7 @@ align-items:center;
 .footer-info{
 font-size:17px;
 line-height:1.8;
+align-items:center;
 }
 
 .footer-map{
@@ -95,8 +96,8 @@ justify-content:flex-end;
 }
 
 .footer-map iframe{
-width:320px;
-height:180px;
+width:250px;
+height:150px;
 border-radius:10px;
 border:0;
 }
