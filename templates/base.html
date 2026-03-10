@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
@@ -51,6 +51,27 @@ const lightbox = GLightbox({
 selector: '.gallery-item'
 });
 </script>
+<script>
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-links");
+const overlay = document.querySelector(".menu-overlay");
+
+toggle.onclick = () => {
+
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+
+};
+
+overlay.onclick = () => {
+
+menu.classList.remove("active");
+overlay.classList.remove("active");
+
+};
+
+</script>
 
 <body>
 
@@ -60,7 +81,7 @@ selector: '.gallery-item'
     <img src="/static/logo.png" alt="Logo" class="logo-img">
     <span class="logo-text">Architecture - Interior Design</span>
 </a>
-
+    <div class="menu-toggle">☰</div>
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="/projects">Projects</a>
@@ -68,6 +89,7 @@ selector: '.gallery-item'
         <a href="/about">About</a>
     </div>
 </nav>
+<div class="menu-overlay"></div>
 
 <!-- CONTENT -->
 <div class="content">
@@ -117,6 +139,6 @@ function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 </script>
-<script src="/static/app.js"></script>
+
 </body>
 </html>                                                             

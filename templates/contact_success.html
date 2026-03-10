@@ -53,5 +53,26 @@
     to { opacity: 1; transform: translateY(0); }
 }
 </style>
+<script>
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-links");
+const overlay = document.querySelector(".menu-overlay");
+
+toggle.onclick = () => {
+
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+
+};
+
+overlay.onclick = () => {
+
+menu.classList.remove("active");
+overlay.classList.remove("active");
+
+};
+
+</script>
 
 {% endblock %}

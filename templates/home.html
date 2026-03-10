@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}H+ Studio{% endblock %}
+{% block title %}H+ studio{% endblock %}
 
 {% block content %}
 
@@ -60,6 +60,17 @@
     </div>
 
 </section>
+
+<script>
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+menu.classList.toggle("active");
+});
+
+</script>
 
 {% endblock %}
 
