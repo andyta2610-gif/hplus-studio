@@ -1,163 +1,172 @@
-/* =========================
-PROJECT DETAIL CONTAINER
-========================= */
+{% extends "base.html" %}
+{% block content %}
 
-.project-detail-container{
-max-width:1500px;
-margin:auto;
-padding:50px 10px;
+<div class="project-detail-container">
+
+    <div class="detail-info">
+        <h1>{{ project.title }}</h1>
+
+        <p><strong>Project type:</strong> {{ project.Project_type }}</p>
+        <p><strong>Area:</strong> {{ project.Area }}</p>
+        <p><strong>Year:</strong> {{ project.Year }}</p>
+        <p><strong>Design:</strong> {{ project.Design }}</p>
+        <p><strong>General contractor:</strong> {{ project.Generalcontractor }}</p>
+        <p><strong>Status:</strong> {{ project.Status }}</p>
+
+        <p class="detail-desc">{{ project.description }}</p>
+    </div>
+
+    <div class="project-gallery">
+        {% for img in project.images %}
+        <a href="{{img}}" class="gallery-item">
+            <img src="{{img}}" alt="">
+        </a>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox" class="lightbox">
+
+<span class="close">&times;</span>
+
+<img id="lightbox-img">
+
+<span class="prev">&#10094;</span>
+<span class="next">&#10095;</span>
+
+</div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+let currentIndex = 0
+let images = []
+
+const galleryItems = document.querySelectorAll(".gallery-item")
+const lightbox = document.getElementById("lightbox")
+const lightboxImg = document.getElementById("lightbox-img")
+const closeBtn = document.querySelector(".close")
+const prevBtn = document.querySelector(".prev")
+const nextBtn = document.querySelector(".next")
+
+// lấy danh sách ảnh
+
+galleryItems.forEach((item,i)=>{
+
+images.push(item.href)
+
+item.addEventListener("click",function(e){
+
+e.preventDefault()
+
+currentIndex = i
+
+openLightbox()
+
+})
+
+})
+
+
+// preload ảnh
+
+images.forEach(src=>{
+let img = new Image()
+img.src = src
+})
+
+
+// mở lightbox
+
+function openLightbox(){
+
+lightbox.style.display = "flex"
+
+lightboxImg.src = images[currentIndex]
+
 }
 
 
-/* =========================
-PROJECT INFO
-========================= */
+// đóng
 
-.detail-info{
-max-width:700px;
-margin-bottom:40px;
-}
+function closeLightbox(){
 
-.detail-info h1{
-font-size:28px;
-font-weight:550;
-margin-bottom:20px;
-}
+lightbox.style.display = "none"
 
-.detail-info p{
-font-size:16px;
-line-height:1.8;
-margin-bottom:6px;
-}
-
-.detail-desc{
-margin-top:20px;
-line-height:1.9;
-max-width:700px;
 }
 
 
-/* =========================
-PROJECT GALLERY GRID
-========================= */
+// ảnh tiếp
+
+function nextImg(){
+
+currentIndex++
+
+if(currentIndex >= images.length){
+currentIndex = 0
+}
+
+lightboxImg.src = images[currentIndex]
+
+}
+
+
+// ảnh trước
+
+function prevImg(){
+
+currentIndex--
+
+if(currentIndex < 0){
+currentIndex = images.length - 1
+}
+
+lightboxImg.src = images[currentIndex]
+
+}
+
+
+closeBtn.onclick = closeLightbox
+nextBtn.onclick = nextImg
+prevBtn.onclick = prevImg
+
+
+// click nền đóng
+
+lightbox.onclick = function(e){
+
+if(e.target === lightbox){
+closeLightbox()
+}
+
+}
+
+})
+
+</script>
+
+@media (max-width:768px){
 
 .project-gallery{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:5px;
-margin-top:40px;
-}
-
-.gallery-item{
-display:block;
-overflow:hidden;
-}
-
-.gallery-item img{
-width:100%;
-height:220px;
-object-fit:cover;
-display:block;
-transition:0.3s;
-cursor:pointer;
-}
-
-.gallery-item:hover img{
-transform:scale(1.05);
-}
-
-
-/* =========================
-LIGHTBOX
-========================= */
-
-.lightbox{
-display:none;
-position:fixed;
-z-index:999;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-justify-content:center;
-align-items:center;
-}
-
-.lightbox img{
-max-width:90%;
-max-height:80%;
-}
-
-.close{
-position:absolute;
-top:25px;
-right:35px;
-font-size:42px;
-color:white;
-cursor:pointer;
-background:rgba(0,0,0,0.6);
-width:50px;
-height:50px;
 display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-transition:0.3s;
+overflow-x:auto;
+gap:10px;
+padding-bottom:10px;
 }
 
-.close:hover{
-background:rgba(255,255,255,0.2);
-}
-
-.prev,
-.next{
-position:absolute;
-top:50%;
-font-size:40px;
-color:white;
-cursor:pointer;
-padding:20px;
-user-select:none;
-}
-
-.prev{
-left:20px;
-}
-
-.next{
-right:20px;
-}
-
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:1100px){
-
-.project-gallery{
-grid-template-columns:repeat(4,1fr);
+.project-gallery img{
+min-width:240px;
+height:160px;
+object-fit:cover;
+border-radius:6px;
 }
 
 }
 
-@media(max-width:800px){
-
-.project-gallery{
-grid-template-columns:repeat(3,1fr);
-}
-
-}
-
-@media(max-width:500px){
-
-.project-gallery{
-grid-template-columns:repeat(2,1fr);
-}
-
-.detail-info h1{
-font-size:30px;
-}
-
-}
+{% endblock %}

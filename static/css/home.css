@@ -50,7 +50,7 @@ max-width:1700px;
 margin:0 auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:50px;
+gap:10px;
 }
 
 .featured-card{
