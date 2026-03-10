@@ -1,144 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-    <meta charset="UTF-8">
-    <title>{% block title %}H+ Studio | Thiết kế kiến trúc & nội thất{% endblock %}</title>
-    <meta name="description" content="H+ Studio chuyên thiết kế kiến trúc, nội thất, villa và nhà phố. Không gian sống tối giản, hiện đại, tinh tế.">
-    <meta name="keywords" content="thiết kế kiến trúc, thiết kế nội thất, kiến trúc sư, villa design, architecture studio">
-    <meta name="author" content="H+ Studio">
-    <meta property="og:title" content="H+ Studio | Architecture & Interior Design">
-    <meta property="og:description" content="Studio thiết kế kiến trúc và nội thất hiện đại">
-    <meta property="og:image" content="https://hplus.id.vn/static/cover.jpg">
-    <meta property="og:url" content="https://hplus.id.vn">
-    <meta property="og:type" content="website">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/static/style.css?v=13">
-    <link rel="stylesheet" href="/static/css/home.css?v=13">
-    <link rel="stylesheet" href="/static/css/projects.css?v=12">
-    <link rel="stylesheet" href="/static/css/project-detail.css?v=12">
-    <link rel="stylesheet" href="/static/css/contact.css?v=12">
-    <link rel="stylesheet" href="/static/css/news.css?v=7"> 
-    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    
+<title>{% block title %}H+ Studio | Thiết kế kiến trúc & nội thất{% endblock %}</title>
 
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "ArchitecturalFirm",
-    "name": "H+ Studio",
-    "url": "https://hplus.id.vn",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vũng Tàu",
-      "addressCountry": "VN"
-     }
-    }
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+<meta name="description" content="H+ Studio chuyên thiết kế kiến trúc, nội thất, villa và nhà phố. Không gian sống tối giản, hiện đại, tinh tế.">
+
+<link rel="stylesheet" href="/static/style.css?v=14">
+<link rel="stylesheet" href="/static/css/home.css?v=13">
+<link rel="stylesheet" href="/static/css/projects.css?v=12">
+<link rel="stylesheet" href="/static/css/project-detail.css?v=12">
+<link rel="stylesheet" href="/static/css/contact.css?v=12">
+<link rel="stylesheet" href="/static/css/news.css?v=7">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
 </head>
-
-
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-<script>
-const lightbox = GLightbox({
-selector: '.gallery-item'
-});
-</script>
 
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <a href="/" class="logo">
-    <img src="/static/logo.png" alt="Logo" class="logo-img">
-    <span class="logo-text">Architecture - Interior Design</span>
-</a>
-    <div class="menu-toggle">☰</div>
-    <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/news">News</a>
-        <a href="/about">About</a>
-    </div>
-</nav>
-<div class="menu-overlay"></div>
 
-<!-- CONTENT -->
-<div class="content">
-    {% block content %}{% endblock %}
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="/" class="logo">
+<img src="/static/logo.png" class="logo-img">
+<span class="logo-text">Architecture - Interior Design</span>
+</a>
+
+<div class="nav-links">
+<a href="/">Home</a>
+<a href="/projects">Projects</a>
+<a href="/news">News</a>
+<a href="/about">About</a>
 </div>
 
+<div class="menu-toggle">☰</div>
+
+</nav>
+
+<div class="menu-overlay"></div>
+
+
+<!-- CONTENT -->
+
+<div class="content">
+
+{% block content %}{% endblock %}
+
+</div>
+
+
 <!-- FOOTER -->
+
 <footer class="footer">
-    <div class="footer-wrapper">
 
-        <div class="footer-left">
-            <div class="footer-info">
-                <p>Số 55 Nguyễn Đình Thi - Tam Thắng - TpHCM | hotline 866.62.58.68</p>
+<div class="footer-wrapper">
 
-                <div class="footer-social">
-                    <a href="https://facebook.com/hplus.studio.vt" target="_blank">Facebook</a>
-                    <span> | </span>
-                    <a href="http://hplus.studio.vt@gmail.com" target="_blank">Email</a>
-                    <span> | </span>
-                    <a href="https://zalo.me/0866625868" target="_blank">Zalo</a>
-                </div>
+<div class="footer-left">
 
-                <p class="copyright">© 2024 H+ studio</p>
-            </div>
-        </div>
+<p>Số 55 Nguyễn Đình Thi - Tam Thắng - TpHCM | hotline 866.62.58.68</p>
 
-        <div class="footer-map">
-            <iframe 
-                width="100%" height="100" style="border:0;border-radius:12px;"
-                loading="lazy" allowfullscreen 
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyXXXXX&q=Số+55+Nguyễn+Đình+Thi+TPHCM">
-            </iframe>
-        </div>
+<div class="footer-social">
 
-    </div>
+<a href="https://facebook.com/hplus.studio.vt">Facebook</a>
+
+<span>|</span>
+
+<a href="mailto:hplus.studio.vt@gmail.com">Email</a>
+
+<span>|</span>
+
+<a href="https://zalo.me/0866625868">Zalo</a>
+
+</div>
+
+<p>© 2024 H+ studio</p>
+
+</div>
+
+
+<div class="footer-map">
+
+<iframe
+width="100%"
+height="120"
+style="border:0;border-radius:12px;"
+loading="lazy"
+src="https://www.google.com/maps/embed/v1/place?key=AIzaSyXXXXX&q=Số+55+Nguyễn+Đình+Thi+TPHCM">
+</iframe>
+
+</div>
+
+</div>
+
 </footer>
+
 
 <script src="/static/slider.js"></script>
 
-<script>
-function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").style.display = "flex";
-}
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-</script>
 <script>
 
-const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".nav-links");
-const overlay = document.querySelector(".menu-overlay");
+document.addEventListener("DOMContentLoaded",function(){
 
-toggle.onclick = () => {
+const toggle = document.querySelector(".menu-toggle")
+const menu = document.querySelector(".nav-links")
+const overlay = document.querySelector(".menu-overlay")
 
-menu.classList.toggle("active");
-overlay.classList.toggle("active");
+toggle.onclick=()=>{
 
-};
+menu.classList.toggle("active")
+overlay.classList.toggle("active")
 
-overlay.onclick = () => {
+}
 
-menu.classList.remove("active");
-overlay.classList.remove("active");
+overlay.onclick=()=>{
 
-};
+menu.classList.remove("active")
+overlay.classList.remove("active")
+
+}
+
+})
 
 </script>
+
+
 </body>
-</html>                                                             
+</html>

@@ -1,172 +1,102 @@
-{% extends "base.html" %}
-{% block content %}
+/* ========================
+PROJECT DETAIL
+======================== */
 
-<div class="project-detail-container">
+.project-detail-container{
 
-    <div class="detail-info">
-        <h1>{{ project.title }}</h1>
+max-width:1400px;
+margin:auto;
 
-        <p><strong>Project type:</strong> {{ project.Project_type }}</p>
-        <p><strong>Area:</strong> {{ project.Area }}</p>
-        <p><strong>Year:</strong> {{ project.Year }}</p>
-        <p><strong>Design:</strong> {{ project.Design }}</p>
-        <p><strong>General contractor:</strong> {{ project.Generalcontractor }}</p>
-        <p><strong>Status:</strong> {{ project.Status }}</p>
+padding:80px 40px;
 
-        <p class="detail-desc">{{ project.description }}</p>
-    </div>
+display:grid;
+grid-template-columns:380px 1fr;
 
-    <div class="project-gallery">
-        {% for img in project.images %}
-        <a href="{{img}}" class="gallery-item">
-            <img src="{{img}}" alt="">
-        </a>
-        {% endfor %}
-    </div>
-
-</div>
-
-
-<!-- LIGHTBOX -->
-
-<div id="lightbox" class="lightbox">
-
-<span class="close">&times;</span>
-
-<img id="lightbox-img">
-
-<span class="prev">&#10094;</span>
-<span class="next">&#10095;</span>
-
-</div>
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function(){
-
-let currentIndex = 0
-let images = []
-
-const galleryItems = document.querySelectorAll(".gallery-item")
-const lightbox = document.getElementById("lightbox")
-const lightboxImg = document.getElementById("lightbox-img")
-const closeBtn = document.querySelector(".close")
-const prevBtn = document.querySelector(".prev")
-const nextBtn = document.querySelector(".next")
-
-// lấy danh sách ảnh
-
-galleryItems.forEach((item,i)=>{
-
-images.push(item.href)
-
-item.addEventListener("click",function(e){
-
-e.preventDefault()
-
-currentIndex = i
-
-openLightbox()
-
-})
-
-})
-
-
-// preload ảnh
-
-images.forEach(src=>{
-let img = new Image()
-img.src = src
-})
-
-
-// mở lightbox
-
-function openLightbox(){
-
-lightbox.style.display = "flex"
-
-lightboxImg.src = images[currentIndex]
+gap:60px;
 
 }
 
 
-// đóng
+/* project info */
 
-function closeLightbox(){
+.detail-info h1{
 
-lightbox.style.display = "none"
+font-size:36px;
+margin-bottom:25px;
+
+}
+
+.detail-info p{
+
+margin-bottom:10px;
+font-size:16px;
+
+}
+
+.detail-desc{
+
+margin-top:20px;
+line-height:1.7;
 
 }
 
 
-// ảnh tiếp
-
-function nextImg(){
-
-currentIndex++
-
-if(currentIndex >= images.length){
-currentIndex = 0
-}
-
-lightboxImg.src = images[currentIndex]
-
-}
-
-
-// ảnh trước
-
-function prevImg(){
-
-currentIndex--
-
-if(currentIndex < 0){
-currentIndex = images.length - 1
-}
-
-lightboxImg.src = images[currentIndex]
-
-}
-
-
-closeBtn.onclick = closeLightbox
-nextBtn.onclick = nextImg
-prevBtn.onclick = prevImg
-
-
-// click nền đóng
-
-lightbox.onclick = function(e){
-
-if(e.target === lightbox){
-closeLightbox()
-}
-
-}
-
-})
-
-</script>
-
-@media (max-width:768px){
+/* gallery */
 
 .project-gallery{
-display:flex;
-overflow-x:auto;
-gap:10px;
-padding-bottom:10px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:12px;
+
 }
 
 .project-gallery img{
-min-width:240px;
-height:160px;
+
+width:100%;
+height:220px;
+
 object-fit:cover;
+
 border-radius:6px;
-}
+
+transition:0.3s;
 
 }
 
-{% endblock %}
+.project-gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* ========================
+MOBILE
+======================== */
+
+@media (max-width:768px){
+
+.project-detail-container{
+
+display:block;
+
+padding:40px 20px;
+
+}
+
+.project-gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.project-gallery img{
+
+height:160px;
+
+}
+
+}

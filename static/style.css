@@ -53,16 +53,18 @@ font-weight:500;
 letter-spacing:1.5px;
 }
 
+
+/* DESKTOP MENU */
+
 .nav-links{
 display:flex;
+gap:40px;
 }
 
 .nav-links a{
-margin-left:30px;
 text-decoration:none;
 color:#111;
 font-weight:500;
-position:relative;
 transition:0.3s;
 }
 
@@ -112,10 +114,6 @@ text-decoration:none;
 color:#111;
 }
 
-.footer-info a:hover{
-transform:translateY(-2px);
-}
-
 .footer-map{
 display:flex;
 justify-content:flex-end;
@@ -137,11 +135,6 @@ ABOUT PAGE
 padding:120px 20px;
 }
 
-.about-wrapper{
-max-width:600px;
-margin:auto;
-}
-
 .about-title{
 font-size:36px;
 font-weight:550;
@@ -161,19 +154,9 @@ text-align:justify;
 margin-bottom:20px;
 }
 
-.about-list{
-margin:18px 0;
-padding-left:20px;
-}
-
-.about-list li{
-margin-bottom:10px;
-line-height:1.8;
-}
-
 
 /* ========================
-HAMBURGER MENU
+HAMBURGER
 ======================== */
 
 .menu-toggle{
@@ -227,9 +210,10 @@ padding:10px 15px;
 
 .logo-text{
 font-size:18px;
-line-height:1.2;
 max-width:180px;
+line-height:1.2;
 }
+
 
 /* hamburger */
 
@@ -241,21 +225,21 @@ top:20px;
 z-index:1001;
 }
 
-}
 
 /* menu panel */
 
 .nav-links{
 position:fixed;
 top:0;
-right:-260px;
+right:-100%;
 width:260px;
 height:100vh;
 background:white;
 flex-direction:column;
-padding:80px 30px;
-transition:0.3s;
+padding:120px 40px;
+transition:0.4s;
 box-shadow:-5px 0 20px rgba(0,0,0,0.1);
+z-index:1001;
 }
 
 .nav-links a{
@@ -266,6 +250,7 @@ margin:15px 0;
 .nav-links.active{
 right:0;
 }
+
 
 /* overlay */
 
@@ -313,7 +298,6 @@ font-size:32px;
 }
 
 .about-content{
-max-width:100%;
 font-size:16px;
 line-height:2;
 padding:0 10px;
@@ -327,10 +311,6 @@ grid-template-columns:1fr;
 gap:30px;
 }
 
-.news-card img{
-height:220px;
-}
-
 
 /* projects */
 
@@ -339,25 +319,12 @@ grid-template-columns:1fr;
 gap:30px;
 }
 
-.project-card img{
-height:240px;
-}
-
 
 /* project detail */
 
 .project-detail-container{
 flex-direction:column;
 padding:40px 20px;
-}
-
-.detail-info{
-max-width:100%;
-}
-
-.detail-info h1{
-font-size:28px;
-margin-bottom:20px;
 }
 
 .project-gallery{
