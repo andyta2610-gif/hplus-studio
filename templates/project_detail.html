@@ -18,104 +18,108 @@
 
     <div class="project-gallery">
         {% for img in project.images %}
-            <a href="{{img}}" class="gallery-item">
-            <img src="{{img}}" alt="">
-            </a>
+        <a href="{{ img }}" class="gallery-item">
+            <img src="{{ img }}" alt="">
+        </a>
         {% endfor %}
     </div>
 
 </div>
 
+
 <!-- LIGHTBOX -->
+
 <div id="lightbox" class="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
+
+    <span class="close">&times;</span>
 
     <img id="lightbox-img">
 
-    <span class="prev" onclick="changeImg(-1)">&#10094;</span>
-    <span class="next" onclick="changeImg(1)">&#10095;</span>
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+
 </div>
 
 
-<!-- JS đặt ở đây -->
-
 <script>
+
+document.addEventListener("DOMContentLoaded", function(){
 
 let currentIndex = 0
 let images = []
 
+const lightbox = document.getElementById("lightbox")
+const lightboxImg = document.getElementById("lightbox-img")
+
 document.querySelectorAll(".gallery-item").forEach((item,i)=>{
 
-images.push(item.href)
+    images.push(item.href)
 
-item.addEventListener("click",function(e){
+    item.addEventListener("click",function(e){
 
-e.preventDefault()
+        e.preventDefault()
 
-openLightbox(i)
+        currentIndex = i
+
+        openLightbox()
+
+    })
 
 })
 
-})
 
-images.forEach(src=>{
-let img = new Image()
-img.src = src
-})
+function openLightbox(){
 
-function openLightbox(index){
-currentIndex=index
-document.getElementById("lightbox").style.display="flex"
-document.getElementById("lightbox-img").src=images[index]
+    lightbox.style.display = "flex"
+
+    lightboxImg.src = images[currentIndex]
+
 }
+
 
 function closeLightbox(){
-document.getElementById("lightbox").style.display="none"
+
+    lightbox.style.display = "none"
+
 }
+
 
 function changeImg(step){
 
-currentIndex+=step
+    currentIndex += step
 
-if(currentIndex<0){
-currentIndex=images.length-1
+    if(currentIndex < 0){
+        currentIndex = images.length - 1
+    }
+
+    if(currentIndex >= images.length){
+        currentIndex = 0
+    }
+
+    lightboxImg.src = images[currentIndex]
+
 }
 
-if(currentIndex>=images.length){
-currentIndex=0
+
+document.querySelector(".close").onclick = closeLightbox
+
+document.querySelector(".prev").onclick = () => changeImg(-1)
+
+document.querySelector(".next").onclick = () => changeImg(1)
+
+
+lightbox.onclick = function(e){
+
+    if(e.target === lightbox){
+
+        closeLightbox()
+
+    }
+
 }
 
-document.getElementById("lightbox-img").src=images[currentIndex]
-
-}
-
-
-document.getElementById("lightbox").onclick=function(e){
-if(e.target.id==="lightbox"){
-closeLightbox()
-}
-}
-</script>
-<script>
-
-const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".nav-links");
-const overlay = document.querySelector(".menu-overlay");
-
-toggle.onclick = () => {
-
-menu.classList.toggle("active");
-overlay.classList.toggle("active");
-
-};
-
-overlay.onclick = () => {
-
-menu.classList.remove("active");
-overlay.classList.remove("active");
-
-};
+})
 
 </script>
+
 {% endblock %}
-
