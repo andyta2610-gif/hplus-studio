@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="/static/css/home.css?v=12">
     <link rel="stylesheet" href="/static/css/projects.css?v=12">
     <link rel="stylesheet" href="/static/css/project-detail.css?v=12">
-    <link rel="stylesheet" href="/static/css/contact.css?v=12"
-    <link rel="stylesheet" href="/static/css/news.css?v=7" 
+    <link rel="stylesheet" href="/static/css/contact.css?v=12">
+    <link rel="stylesheet" href="/static/css/news.css?v=7"> 
     <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -51,27 +51,7 @@ const lightbox = GLightbox({
 selector: '.gallery-item'
 });
 </script>
-<script>
 
-const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".nav-links");
-const overlay = document.querySelector(".menu-overlay");
-
-toggle.onclick = () => {
-
-menu.classList.toggle("active");
-overlay.classList.toggle("active");
-
-};
-
-overlay.onclick = () => {
-
-menu.classList.remove("active");
-overlay.classList.remove("active");
-
-};
-
-</script>
 
 <body>
 
@@ -139,6 +119,26 @@ function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 </script>
+<script>
 
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-links");
+const overlay = document.querySelector(".menu-overlay");
+
+toggle.onclick = () => {
+
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+
+};
+
+overlay.onclick = () => {
+
+menu.classList.remove("active");
+overlay.classList.remove("active");
+
+};
+
+</script>
 </body>
 </html>                                                             
