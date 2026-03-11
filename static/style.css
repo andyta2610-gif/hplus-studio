@@ -132,11 +132,11 @@ ABOUT PAGE
 ======================== */
 
 .about-section{
-padding:120px 20px;
+padding:120px 50px;
 }
 
 .about-title{
-font-size:36px;
+font-size:33px;
 font-weight:550;
 margin-bottom:60px;
 text-align:center;
@@ -154,6 +154,10 @@ text-align:justify;
 margin-bottom:20px;
 }
 
+.about-list {
+    padding-left: 40px;
+    line-height: 2.2;
+}
 
 /* ========================
 HAMBURGER
@@ -232,7 +236,7 @@ z-index:1001;
 position:fixed;
 top:0;
 right:-100%;
-width:260px;
+width:130px;
 height:100vh;
 background:white;
 flex-direction:column;
@@ -256,16 +260,16 @@ display:flex;
 /* overlay */
 
 .menu-overlay{
-display:block;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.4);
-opacity:0;
+background:rgba(0,0,0,0.3);
+opacity:0.5;
 pointer-events:none;
 transition:0.3s;
+z-index:1000;
 }
 
 .menu-overlay.active{

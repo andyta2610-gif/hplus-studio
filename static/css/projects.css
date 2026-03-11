@@ -96,27 +96,54 @@ filter:brightness(.7);
 
 @media (max-width:768px){
 
+.projects-page{
+width:92%;
+gap:60px;
+}
+
+/* layout 1 cột */
+.project-block{
+flex-direction:column;
+gap:20px;
+}
+
+/* bỏ đảo layout */
+.project-block.reverse{
+flex-direction:column;
+}
+
+/* chỉ hiện title */
 .project-info{
+display:block;
+max-width:none;
+}
+
+.project-info p{
 display:none;
 }
 
-.project-gallery{
-display:none;
+.project-info h2,
+.project-info h1{
+font-size:26px;
+margin-bottom:10px;
 }
 
-.project-title{
-font-size:24px;
-margin-top:10px;
+/* gallery 3 ảnh / hàng */
+.project-grid{
+grid-template-columns:repeat(3,1fr);
+gap:6px;
 }
 
-.projects-grid{
-grid-template-columns:1fr;
-gap:30px;
+/* ảnh vuông */
+.project-grid img{
+aspect-ratio:1/1;
 }
 
-.project-card img{
-height:240px;
-object-fit:cover;
+/* nút MORE nhỏ lại */
+.more-overlay{
+width:70px;
+height:70px;
+font-size:14px;
 }
 
 }
