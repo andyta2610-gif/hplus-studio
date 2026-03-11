@@ -223,7 +223,7 @@ line-height:1.2;
 
 .menu-toggle{
 display:block;
-position:absolute;
+position:relative;
 right:20px;
 top:20px;
 z-index:1001;
@@ -260,16 +260,16 @@ display:flex;
 /* overlay */
 
 .menu-overlay{
+display:block;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.3);
+background:rgba(0,0,0,0.4);
 opacity:0.5;
 pointer-events:none;
 transition:0.3s;
-z-index:1000;
 }
 
 .menu-overlay.active{
