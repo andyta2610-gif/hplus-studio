@@ -45,80 +45,79 @@
 
 document.addEventListener("DOMContentLoaded", function(){
 
-let currentIndex = 0
-let images = []
+let currentIndex = 0;
 
-const lightbox = document.getElementById("lightbox")
-const lightboxImg = document.getElementById("lightbox-img")
+const galleryItems = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
 
-document.querySelectorAll(".gallery-item").forEach((item,i)=>{
+const images = [];
 
-    images.push(item.href)
+// lấy danh sách ảnh
+galleryItems.forEach((item,i)=>{
+
+    const img = item.querySelector("img").src;
+    images.push(img);
 
     item.addEventListener("click",function(e){
 
-        e.preventDefault()
+        e.preventDefault();
 
-        currentIndex = i
+        currentIndex = i;
 
-        openLightbox()
+        openLightbox();
 
-    })
+    });
 
-})
+});
 
 
 function openLightbox(){
 
-    lightbox.style.display = "flex"
-
-    lightboxImg.src = images[currentIndex]
+    lightbox.style.display = "flex";
+    lightboxImg.src = images[currentIndex];
 
 }
-
 
 function closeLightbox(){
 
-    lightbox.style.display = "none"
+    lightbox.style.display = "none";
 
 }
-
 
 function changeImg(step){
 
-    currentIndex += step
+    currentIndex += step;
 
     if(currentIndex < 0){
-        currentIndex = images.length - 1
+        currentIndex = images.length - 1;
     }
 
     if(currentIndex >= images.length){
-        currentIndex = 0
+        currentIndex = 0;
     }
 
-    lightboxImg.src = images[currentIndex]
+    lightboxImg.src = images[currentIndex];
 
 }
 
 
-document.querySelector(".close").onclick = closeLightbox
+document.querySelector(".close").onclick = closeLightbox;
 
-document.querySelector(".prev").onclick = () => changeImg(-1)
+document.querySelector(".prev").onclick = () => changeImg(-1);
 
-document.querySelector(".next").onclick = () => changeImg(1)
+document.querySelector(".next").onclick = () => changeImg(1);
 
 
-lightbox.onclick = function(e){
+lightbox.addEventListener("click", function(e){
 
     if(e.target === lightbox){
-
-        closeLightbox()
-
+        closeLightbox();
     }
 
-}
+});
 
-})
+});
 
 </script>
 
