@@ -249,6 +249,7 @@ margin:15px 0;
 
 .nav-links.active{
 right:0;
+display:flex;
 }
 
 
@@ -286,8 +287,13 @@ line-height:1.2;
 }
 
 .hero-button{
-padding:12px 18px;
+display:inline-block;
+padding:14px 20px;
 font-size:14px;
+border-radius:8px;
+white-space:nowrap;
+}
+
 }
 
 

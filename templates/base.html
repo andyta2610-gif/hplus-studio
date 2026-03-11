@@ -39,6 +39,9 @@
 <span class="logo-text">Architecture - Interior Design</span>
 </a>
 
+
+<div class="menu-toggle">☰</div>
+
 <div class="nav-links">
 <a href="/">Home</a>
 <a href="/projects">Projects</a>
@@ -46,11 +49,10 @@
 <a href="/about">About</a>
 </div>
 
-<div class="menu-toggle">☰</div>
+<div class="menu-overlay"></div>
 
 </nav>
 
-<div class="menu-overlay"></div>
 
 
 <!-- CONTENT -->
@@ -114,27 +116,37 @@ src="https://www.google.com/maps/embed/v1/place?key=AIzaSyXXXXX&q=Số+55+Nguy�
 
 <script>
 
-document.addEventListener("DOMContentLoaded",function(){
+<script>
 
-const toggle = document.querySelector(".menu-toggle")
-const menu = document.querySelector(".nav-links")
-const overlay = document.querySelector(".menu-overlay")
+document.addEventListener("DOMContentLoaded", function(){
 
-toggle.onclick=()=>{
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-links");
+const overlay = document.querySelector(".menu-overlay");
 
-menu.classList.toggle("active")
-overlay.classList.toggle("active")
+if(toggle){
+
+toggle.addEventListener("click", function(){
+
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+
+});
 
 }
 
-overlay.onclick=()=>{
+if(overlay){
 
-menu.classList.remove("active")
-overlay.classList.remove("active")
+overlay.addEventListener("click", function(){
+
+menu.classList.remove("active");
+overlay.classList.remove("active");
+
+});
 
 }
 
-})
+});
 
 </script>
 

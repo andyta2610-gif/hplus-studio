@@ -92,37 +92,31 @@ opacity:1;
 filter:brightness(.7);
 }
 
+/* ===== PROJECT MOBILE ===== */
+
 @media (max-width:768px){
 
-.project-detail-container{
-padding:40px 20px;
-}
-
-.detail-info{
-max-width:100%;
-}
-
-.detail-info h1{
-font-size:30px;
+.project-info{
+display:none;
 }
 
 .project-gallery{
-grid-template-columns:repeat(2,1fr);
-gap:8px;
+display:none;
 }
 
-.gallery-item img{
-height:150px;
+.project-title{
+font-size:24px;
+margin-top:10px;
 }
 
+.projects-grid{
+grid-template-columns:1fr;
+gap:30px;
 }
 
-@media (max-width:768px){
-
-.more-button{
-width:120px;
-height:120px;
-font-size:14px;
+.project-card img{
+height:240px;
+object-fit:cover;
 }
 
 }
