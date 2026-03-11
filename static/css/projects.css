@@ -92,8 +92,6 @@ opacity:1;
 filter:brightness(.7);
 }
 
-/* ===== PROJECT MOBILE ===== */
-
 @media (max-width:768px){
 
 .projects-page{
@@ -112,12 +110,17 @@ gap:20px;
 flex-direction:column;
 }
 
-/* chỉ hiện title */
+/* thứ tự hiển thị */
 .project-info{
-display:block;
+order:1;
 max-width:none;
 }
 
+.project-grid-wrapper{
+order:2;
+}
+
+/* chỉ hiện title */
 .project-info p{
 display:none;
 }
@@ -134,12 +137,11 @@ grid-template-columns:repeat(3,1fr);
 gap:6px;
 }
 
-/* ảnh vuông */
 .project-grid img{
 aspect-ratio:1/1;
 }
 
-/* nút MORE nhỏ lại */
+/* nút more nhỏ */
 .more-overlay{
 width:70px;
 height:70px;

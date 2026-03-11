@@ -32,7 +32,7 @@ backdrop-filter:blur(10px);
 display:flex;
 align-items:center;
 justify-content:space-between;
-z-index:1000;
+z-index:2000;
 }
 
 .logo{
@@ -132,11 +132,11 @@ ABOUT PAGE
 ======================== */
 
 .about-section{
-padding:120px 50px;
+padding:120px 20px;
 }
 
 .about-title{
-font-size:33px;
+font-size:36px;
 font-weight:550;
 margin-bottom:60px;
 text-align:center;
@@ -154,10 +154,6 @@ text-align:justify;
 margin-bottom:20px;
 }
 
-.about-list {
-    padding-left: 40px;
-    line-height: 2.2;
-}
 
 /* ========================
 HAMBURGER
@@ -223,7 +219,7 @@ line-height:1.2;
 
 .menu-toggle{
 display:block;
-position:relative;
+position:absolute;
 right:20px;
 top:20px;
 z-index:1001;
@@ -236,7 +232,7 @@ z-index:1001;
 position:fixed;
 top:0;
 right:-100%;
-width:130px;
+width:260px;
 height:100vh;
 background:white;
 flex-direction:column;
@@ -267,7 +263,7 @@ left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.4);
-opacity:0.5;
+opacity:0;
 pointer-events:none;
 transition:0.3s;
 }
