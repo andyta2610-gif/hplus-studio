@@ -147,17 +147,6 @@ border:0;
 ABOUT PAGE
 ======================== */
 
-.about-section{
-padding:120px 20px;
-}
-
-.about-title{
-font-size:36px;
-font-weight:550;
-margin-bottom:60px;
-text-align:center;
-}
-
 .about-content{
 max-width:1200px;
 margin:auto;
@@ -336,18 +325,6 @@ max-width:320px;
 
 }
 
-
-/* about */
-
-.about-title{
-font-size:32px;
-}
-
-.about-content{
-font-size:16px;
-line-height:2;
-padding:0 10px;
-}
 
 /* ========================
 HEADER FIX MOBILE MENU
