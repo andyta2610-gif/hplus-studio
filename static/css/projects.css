@@ -116,6 +116,10 @@ order:1;
 max-width:none;
 }
 
+.project-info p{
+display:none;
+}
+
 .project-grid-wrapper{
 order:2;
 }

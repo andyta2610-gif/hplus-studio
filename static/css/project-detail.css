@@ -93,9 +93,10 @@ grid-template-columns:repeat(2,1fr);
 }
 
 .project-gallery img{
-
-height:160px;
-
+width:100%;
+height:auto;
+aspect-ratio:1/1;
+object-fit:cover;
 }
 
 }

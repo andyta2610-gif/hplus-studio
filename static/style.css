@@ -95,16 +95,17 @@ FOOTER
 
 .footer{
 background:#afa89b;
-padding:10px 50px;
+padding:20px;
+text-align:center;
 }
 
 .footer-wrapper{
 max-width:90%;
 margin:auto;
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr;
 gap:10px;
-align-items:center;
+text-align:center;
 }
 
 .footer-social a{
@@ -126,10 +127,12 @@ transition:0.3s;
 .footer-map{
 display:flex;
 justify-content:flex-end;
+margin-top:10px;
 }
 
 .footer-map iframe{
-width:300px;
+width:100%;
+max-width:320px;
 height:120px;
 border-radius:10px;
 border:0;
@@ -228,10 +231,10 @@ line-height:1.2;
 
 .menu-toggle{
 display:block;
-position:absolute;
+position:relative;
 right:20px;
 top:20px;
-z-index:1001;
+z-index:3000;
 }
 
 
