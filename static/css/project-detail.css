@@ -100,3 +100,54 @@ object-fit:cover;
 }
 
 }
+
+/* ========================
+LIGHTBOX
+======================== */
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+align-items:center;
+justify-content:center;
+z-index:5000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+object-fit:contain;
+}
+
+.lightbox .close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+.lightbox .prev,
+.lightbox .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:40px;
+color:white;
+cursor:pointer;
+padding:20px;
+}
+
+.lightbox .prev{
+left:20px;
+}
+
+.lightbox .next{
+right:20px;
+}

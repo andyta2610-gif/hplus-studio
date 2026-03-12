@@ -108,19 +108,22 @@ gap:10px;
 text-align:center;
 }
 
+.footer-left{
+line-height:1.8;
+}
+
+.footer-left p{
+margin-bottom:12px;
+}
+
 .footer-social a{
 text-decoration:none;
 color:#111;
 margin-right:10px;
+position:relative;
 }
-
-.footer-left p{
-line-height:1.8;
-margin-bottom:12px;
-}
-
 .footer-social a:hover{
-opacity:0.6;
+opacity:0.9;
 transition:0.3s;
 }
 
