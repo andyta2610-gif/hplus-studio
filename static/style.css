@@ -230,6 +230,7 @@ line-height:1.2;
 /* menu panel */
 
 .menu-toggle{
+display:block;
 position:relative;
 z-index:10000;
 cursor:pointer;
@@ -336,6 +337,7 @@ z-index:9999;
 }
 
 .menu-toggle{
+display:block;
 position:relative;
 z-index:10000;
 cursor:pointer;

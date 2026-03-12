@@ -78,7 +78,9 @@ transform:scale(1.05);
 }
 
 .featured-info h2{
-margin-top:12px;
+text-align:center;
+margin-top:80px;
+margin-bottom:50px;
 font-size:28px;
 font-weight:550;
 }
