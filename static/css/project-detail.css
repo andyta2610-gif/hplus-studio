@@ -46,7 +46,8 @@ display:grid;
 
 grid-template-columns:repeat(5,1fr);
 
-gap:2px;
+column-gap:3px;   /* khoảng cách ngang */
+row-gap:3px;       /* khoảng cách dọc nhỏ lại */
 
 margin-top:40px;
 
@@ -67,7 +68,7 @@ transition:0.3s;
 
 .project-gallery img:hover{
 
-transform:scale(1.05);
+transform:scale(1.02);
 
 }
 
