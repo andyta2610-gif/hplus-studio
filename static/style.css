@@ -83,7 +83,7 @@ padding:38px 8%;
 
 .section-title{
 text-align:center;
-font-size:35px;
+font-size:30px;
 margin-bottom:30px;
 font-weight:550;
 }
@@ -149,12 +149,12 @@ border:0;
 max-width:1200px;
 margin:120px auto 40px auto;
 padding:0 8%;
+text-align:center;
 }
 
 .page-title h1{
-font-size:35px;
+font-size:30px;
 font-weight:550;
-text-align:center;
 }
 
 .about-content{
@@ -236,9 +236,7 @@ line-height:1.2;
 
 .menu-toggle{
 display:block;
-position:relative;
 z-index:10002;
-cursor:pointer;
 }
 
 .nav-links{
@@ -260,9 +258,7 @@ padding-left:25px;
 transition:0.4s;
 box-shadow:-10px 0 20px rgba(0,0,0,0.15);
 z-index:9999;
-}
 
-.nav-links{
 opacity:0;
 }
 
@@ -333,7 +329,6 @@ max-width:320px;
 }
 
 }
-
 
 
 .page-title h1{
