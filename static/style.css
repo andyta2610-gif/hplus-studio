@@ -247,14 +247,17 @@ z-index:10000;
 position:fixed;
 top:0;
 right:-100%;
-width:260px;
+width:35vw;
+min-width:180px;
+max-width:260px;
 height:100vh;
 background:white;
+
 display:flex;
 flex-direction:column;
 justify-content:center;
 
-padding-left:40px;
+padding-left:25px;
 
 transition:0.4s;
 box-shadow:-10px 0 20px rgba(0,0,0,0.15);
@@ -262,8 +265,8 @@ z-index:9999;
 }
 
 .nav-links a{
-font-size:18px;
-margin:15px 0;
+font-size:17px;
+margin:14px 0;
 }
 
 .nav-links.active{
@@ -342,4 +345,17 @@ line-height:2;
 padding:0 10px;
 }
 
+/* ========================
+HEADER FIX MOBILE MENU
+======================== */
 
+header{
+position:relative;
+z-index:9999;
+}
+
+.menu-toggle{
+position:relative;
+z-index:10000;
+cursor:pointer;
+}

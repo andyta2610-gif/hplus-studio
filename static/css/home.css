@@ -77,8 +77,10 @@ transition:.4s;
 transform:scale(1.05);
 }
 
-.featured-info{
+.featured-info h2{
 margin-top:12px;
+font-size:28px;
+font-weight:550;
 }
 
 .featured-info h3{
