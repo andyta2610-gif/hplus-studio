@@ -227,19 +227,10 @@ padding:10px 15px;
 
 .logo-text{
 font-size:18px;
+font-weight:600;
 max-width:180px;
 line-height:1.2;
 }
-
-
-/* hamburger */
-
-.menu-toggle{
-display:block;
-position:relative;
-z-index:10000;
-}
-
 
 /* menu panel */
 
@@ -310,7 +301,7 @@ line-height:1.2;
 .hero-button{
 display:inline-block;
 padding:14px 20px;
-font-size:14px;
+font-size:16px;
 border-radius:8px;
 white-space:nowrap;
 }
@@ -322,7 +313,7 @@ text-align:center;
 
 .footer-map{
 justify-content:center;
-margin-top:10px;
+margin-top:1px;
 }
 
 .footer-map iframe{
