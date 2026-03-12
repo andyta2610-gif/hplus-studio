@@ -88,7 +88,6 @@ margin-bottom:30px;
 font-weight:550;
 }
 
-
 /* ========================
 FOOTER
 ======================== */
@@ -96,51 +95,54 @@ FOOTER
 .footer{
 background:#afa89b;
 padding:20px;
-text-align:center;
 }
 
 .footer-wrapper{
-max-width:90%;
+max-width:1200px;
 margin:auto;
+
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-text-align:center;
+grid-template-columns:1fr auto;   /* info trái - map phải */
+align-items:center;
+gap:20px;
 }
+
+/* info */
 
 .footer-left{
 line-height:1.8;
 }
 
 .footer-left p{
-margin-bottom:12px;
+margin:0 0 8px 0;
 }
+
+/* social */
 
 .footer-social a{
 text-decoration:none;
 color:#111;
-margin-right:10px;
-position:relative;
+margin-right:12px;
+transition:0.25s;
 }
+
 .footer-social a:hover{
-opacity:0.9;
-transition:0.3s;
+opacity:0.6;
 }
+
+/* map */
 
 .footer-map{
 display:flex;
 justify-content:flex-end;
-margin-top:10px;
 }
 
 .footer-map iframe{
-width:100%;
-max-width:320px;
+width:300px;
 height:120px;
 border-radius:10px;
 border:0;
 }
-
 
 /* ========================
 ABOUT PAGE
@@ -313,10 +315,21 @@ white-space:nowrap;
 }
 
 .footer-wrapper{
-grid-template-columns:1fr;
-}
+grid-template-columns:1fr;   /* xuống 1 cột */
+text-align:center;
 }
 
+.footer-map{
+justify-content:center;
+margin-top:10px;
+}
+
+.footer-map iframe{
+width:100%;
+max-width:320px;
+}
+
+}
 /* about */
 
 .about-title{
