@@ -32,7 +32,7 @@ backdrop-filter:blur(10px);
 display:flex;
 align-items:center;
 justify-content:space-between;
-z-index:2000;
+z-index:9999;
 }
 
 .logo{
@@ -104,7 +104,7 @@ margin:auto;
 display:grid;
 grid-template-columns:1fr auto;   /* info trái - map phải */
 align-items:center;
-gap:20px;
+gap:40px;
 }
 
 /* info */
@@ -312,8 +312,6 @@ border-radius:8px;
 white-space:nowrap;
 }
 
-}
-
 .footer-wrapper{
 grid-template-columns:1fr;   /* xuống 1 cột */
 text-align:center;
@@ -330,6 +328,8 @@ max-width:320px;
 }
 
 }
+
+
 /* about */
 
 .about-title{
@@ -343,60 +343,3 @@ padding:0 10px;
 }
 
 
-/* news */
-
-.news-grid{
-grid-template-columns:1fr;
-gap:30px;
-}
-
-
-/* projects */
-
-.projects-grid{
-grid-template-columns:1fr;
-gap:30px;
-}
-
-
-/* project detail */
-
-.project-detail-container{
-flex-direction:column;
-padding:40px 20px;
-}
-
-.project-gallery{
-display:flex;
-overflow-x:auto;
-gap:10px;
-padding-bottom:10px;
-}
-
-.project-gallery img{
-min-width:240px;
-height:160px;
-object-fit:cover;
-border-radius:6px;
-}
-
-
-/* contact */
-
-.contact-form{
-padding:20px;
-}
-
-.contact-form input,
-.contact-form textarea{
-font-size:16px;
-padding:14px;
-}
-
-.contact-form button{
-width:100%;
-padding:16px;
-font-size:16px;
-}
-
-}

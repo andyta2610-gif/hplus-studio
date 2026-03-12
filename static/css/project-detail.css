@@ -16,11 +16,11 @@ display:block;
 
 /* project info */
 
-.detail-info h1{
+.detail-info h2{
 
-font-size:36px;
-margin-bottom:25px;
-
+font-size:28px;
+margin-bottom:10px;
+font-weight:550
 }
 
 .detail-info p{
@@ -46,7 +46,7 @@ display:grid;
 
 grid-template-columns:repeat(5,1fr);
 
-gap:12px;
+gap:5px;
 
 margin-top:40px;
 
@@ -71,35 +71,6 @@ transform:scale(1.05);
 
 }
 
-
-/* ========================
-MOBILE
-======================== */
-
-@media (max-width:768px){
-
-.project-detail-container{
-
-display:block;
-
-padding:40px 20px;
-
-}
-
-.project-gallery{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.project-gallery img{
-width:100%;
-height:auto;
-aspect-ratio:1/1;
-object-fit:cover;
-}
-
-}
 
 /* ========================
 LIGHTBOX
@@ -150,4 +121,43 @@ left:20px;
 
 .lightbox .next{
 right:20px;
+}
+
+/* ========================
+MOBILE
+======================== */
+
+@media (max-width:768px){
+
+.project-detail-container{
+
+display:block;
+
+padding:40px 20px;
+
+}
+
+.project-gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.project-gallery img{
+width:100%;
+height:auto;
+aspect-ratio:1/1;
+object-fit:cover;
+}
+
+}
+
+@media (max-width:768px){
+
+.lightbox .prev,
+.lightbox .next,
+.lightbox .close{
+display:none;
+}
+
 }

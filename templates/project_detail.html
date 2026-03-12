@@ -4,7 +4,7 @@
 <div class="project-detail-container">
 
     <div class="detail-info">
-        <h1>{{ project.title }}</h1>
+        <h2>{{ project.title }}</h2>
 
         <p><strong>Project type:</strong> {{ project.Project_type }}</p>
         <p><strong>Area:</strong> {{ project.Area }}</p>
@@ -50,6 +50,9 @@ let images = []
 
 const lightbox = document.getElementById("lightbox")
 const lightboxImg = document.getElementById("lightbox-img")
+
+let startX = 0
+let endX = 0
 
 document.querySelectorAll(".gallery-item").forEach((item,i)=>{
 
@@ -108,6 +111,26 @@ lightbox.onclick = function(e){
     }
 
 }
+
+/* SWIPE MOBILE */
+
+lightboxImg.addEventListener("touchstart", e=>{
+startX = e.changedTouches[0].screenX
+})
+
+lightboxImg.addEventListener("touchend", e=>{
+
+endX = e.changedTouches[0].screenX
+
+if(endX < startX - 50){
+changeImg(1)
+}
+
+if(endX > startX + 50){
+changeImg(-1)
+}
+
+})
 
 })
 
