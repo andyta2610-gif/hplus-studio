@@ -104,7 +104,7 @@ height:65vh;
 }
 
 .hero-title{
-font-size:33px;
+font-size:30px;
 line-height:1.2;
 }
 
@@ -118,8 +118,8 @@ grid-template-columns:repeat(2,1fr);
 gap:8px;
 }
 
-.featured-info h2{
-font-size:18px;
+.featured-info{
+font-size:22px;
 font-weight:550
 }
 

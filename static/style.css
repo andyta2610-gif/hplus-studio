@@ -32,7 +32,7 @@ backdrop-filter:blur(10px);
 display:flex;
 align-items:center;
 justify-content:space-between;
-z-index:1001;
+z-index:10001;
 }
 
 .logo{
@@ -230,7 +230,7 @@ line-height:1.2;
 .menu-toggle{
 display:block;
 position:relative;
-z-index:10000;
+z-index:10002;
 cursor:pointer;
 }
 
@@ -243,7 +243,6 @@ min-width:120px;
 max-width:200px;
 height:100vh;
 background:white;
-opacity:1;
 
 display:flex;
 flex-direction:column;
@@ -329,21 +328,6 @@ max-width:320px;
 }
 
 
-/* ========================
-HEADER FIX MOBILE MENU
-======================== */
-
-header{
-position:relative;
-z-index:9999;
-}
-
-.menu-toggle{
-display:block;
-position:relative;
-z-index:10000;
-cursor:pointer;
-}
 
 .page-title h1{
 font-size:30px;
