@@ -167,7 +167,7 @@ text-align:justify;
 }
 
 .about-text ul{
-padding-left:30px;
+padding-left:40px;
 }
 
 .about-text li{
@@ -236,7 +236,7 @@ line-height:1.2;
 
 .menu-toggle{
 display:block;
-z-index:10002;
+z-index:1002;
 }
 
 .nav-links{
@@ -257,7 +257,7 @@ padding-left:25px;
 
 transition:0.4s;
 box-shadow:-10px 0 20px rgba(0,0,0,0.15);
-z-index:9999;
+z-index:1001;
 
 opacity:0;
 }
@@ -330,12 +330,11 @@ max-width:320px;
 
 }
 
-
 .page-title h1{
 font-size:30px;
 font-weight:550;
 text-align:center;
 
-margin-top:60px;
-margin-bottom:40px;
+margin-top:10px;
+margin-bottom:30px;
 }

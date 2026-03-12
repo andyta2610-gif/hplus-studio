@@ -45,9 +45,7 @@ line-height:1.7;
 display:grid;
 
 grid-template-columns:repeat(5,1fr);
-
-column-gap:3px;   /* khoảng cách ngang */
-row-gap:3px;       /* khoảng cách dọc nhỏ lại */
+gap:4px;
 
 margin-top:40px;
 
@@ -60,7 +58,7 @@ aspect-ratio:1/1;
 
 object-fit:cover;
 
-border-radius:3px;
+border-radius:0px;
 
 transition:0.3s;
 
