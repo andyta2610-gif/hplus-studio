@@ -109,25 +109,24 @@ gap:40px;
 
 /* info */
 
-.footer-left{
-line-height:1.8;
-}
-
 .footer-left p{
-margin:0 0 8px 0;
+margin:10px 0;
 }
 
-/* social */
+.footer-social{
+margin:10px 0;
+}
 
 .footer-social a{
 text-decoration:none;
 color:#111;
-margin-right:12px;
-transition:0.25s;
+margin-right:14px;
 }
 
-.footer-social a:hover{
-opacity:0.6;
+.footer-social a:not(:last-child)::after{
+content:"•";
+margin-left:14px;
+color:#666;
 }
 
 /* map */
@@ -233,6 +232,12 @@ line-height:1.2;
 }
 
 /* menu panel */
+
+.menu-toggle{
+position:relative;
+z-index:10000;
+cursor:pointer;
+}
 
 .nav-links{
 position:fixed;
