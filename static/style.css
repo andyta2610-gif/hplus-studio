@@ -245,7 +245,7 @@ min-width:120px;
 max-width:200px;
 height:100vh;
 background:white;
-opacity:0.3;
+opacity:1;
 
 display:flex;
 flex-direction:column;
@@ -258,15 +258,19 @@ box-shadow:-10px 0 20px rgba(0,0,0,0.15);
 z-index:9999;
 }
 
-.nav-links a{
-font-size:17px;
-margin:14px 0;
+.nav-links{
+opacity:0;
 }
 
 .nav-links.active{
 right:0;
+opacity:1;
 }
 
+.nav-links a{
+font-size:18px;
+margin:18px 0;
+}
 
 /* overlay */
 
