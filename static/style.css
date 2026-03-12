@@ -170,6 +170,13 @@ text-align:justify;
 margin-bottom:20px;
 }
 
+.about-text ul{
+padding-left:30px;
+}
+
+.about-text li{
+margin-bottom:10px;
+}
 
 /* ========================
 HAMBURGER
@@ -355,4 +362,13 @@ z-index:9999;
 position:relative;
 z-index:10000;
 cursor:pointer;
+}
+
+.page-title h1{
+font-size:30px;
+font-weight:550;
+text-align:center;
+
+margin-top:60px;
+margin-bottom:40px;
 }
