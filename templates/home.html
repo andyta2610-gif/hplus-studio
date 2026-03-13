@@ -42,7 +42,7 @@
 
         {% for p in featured_projects %}
 
-        <a href="/projects/{{ p.slug }}" class="featured-card">
+        <a href="/projects#{{ p.slug }}" class="featured-card">
 
             <div class="featured-image">
                 <img src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy">
