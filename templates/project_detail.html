@@ -6,16 +6,6 @@
     <div class="detail-info">
         <h2>{{ project.title }}</h2>
 
-        <p><strong>Project type:</strong> {{ project.Project_type }}</p>
-        <p><strong>Area:</strong> {{ project.Area }}</p>
-        <p><strong>Year:</strong> {{ project.Year }}</p>
-        <p><strong>Design:</strong> {{ project.Design }}</p>
-        <p><strong>General contractor:</strong> {{ project.Generalcontractor }}</p>
-        <p><strong>Status:</strong> {{ project.Status }}</p>
-
-        <p class="detail-desc">{{ project.description }}</p>
-    </div>
-
     <div class="project-gallery">
         {% for img in project.images %}
         <a href="{{ img }}" class="gallery-item">
