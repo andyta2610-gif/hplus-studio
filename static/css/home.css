@@ -119,16 +119,16 @@ grid-template-columns:repeat(2,1fr);
 gap:8px;
 }
 
-.featured-info{
+.featured-info h2{
+text-align:center;
+font-size:26px;
+font-weight:550;
+}
+
+.featured-info h3{
 font-size:22px;
-font-weight:550
+font-weight:500;
+
 }
-
-.section-title{
-font-size:24px;
-margin-bottom:25px;
-}
-
-
 
 }
