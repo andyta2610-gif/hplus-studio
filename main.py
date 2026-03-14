@@ -160,7 +160,7 @@ def contact_submit(
 ):
 
     background_tasks.add_task(
-        send_email_notify,
+        send_zalo_notify,
         name,
         phone,
         email,
@@ -196,37 +196,54 @@ def news(request: Request):
             "news_list": news_data
         }
     )
+
 # =============================
-# EMAIL SEND
+# ZALO OA CONFIG
 # =============================
-def send_email_notify(name, phone, email, location, project_type, budget, message):
 
-    sender = os.getenv("EMAIL_USER")
-    password = os.getenv("EMAIL_PASS")
-    receiver = os.getenv("EMAIL_RECEIVER")
+import requests
+from fastapi import Form, BackgroundTasks
+from fastapi.responses import RedirectResponse
 
-    body = f"""
-New client contact
+ZALO_ACCESS_TOKEN = "IjMh85sM4rL6qQ4cNfKPKqBHhYDSYNXJ2Q2HV1QV9sTOXkWI3xij54Mtus0choHNEPhdJ5wMNZerWx1ASw1nPIxdo4PGy0OoCCN5FdQ24meTXTi1VhKP5m7n-p9gp3f67SwAP7-EIszWjeva5u96KbMXyI0Rc44jNe6m812b0oPtij04BFrdDL3CeICexnWnIw3P7nA9Q3DoXumv6hOr24_oXG8cp5SYJl3WLHJMBbTeo-qWDkLUK47qlN8vytL-S-I-TJFvRqToegKo6h9a5LQAhXb8aNSINjA24WkLJmaIaeDz3eLW3bJAroCoxZ06QgZ0FZRfAH10zDCGFDWa9M2Tup0LZXi1IhRH452eV3e8kha-Hej032FAhNGz-t9HJTl5Ta_CCM03uF0JViGROndPqbO6cHzwBtQ0GL6D65S"
+ZALO_USER_ID = "2736242473318265174"   # user đã từng chat với OA
 
-Name: {name}
-Phone: {phone}
+
+# =============================
+# SEND ZALO MESSAGE
+# =============================
+
+def send_zalo_notify(name, phone, email, location, project_type, budget, message):
+
+    text = f"""
+YÊU CẦU THIẾT KẾ MỚI
+
+Họ tên: {name}
+Điện thoại: {phone}
 Email: {email}
-Location: {location}
-Project: {project_type}
-Budget: {budget}
 
-Message:
+Địa điểm: {location}
+Loại công trình: {project_type}
+Ngân sách: {budget}
+
+Mô tả:
 {message}
 """
 
-    msg = MIMEText(body, "plain", "utf-8")
-    msg["Subject"] = "New Contact Request"
-    msg["From"] = sender
-    msg["To"] = receiver
+    url = "https://openapi.zalo.me/v3.0/oa/message/cs"
 
-    server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-    server.login(sender, password)
-    server.sendmail(sender, receiver, msg.as_string())
-    server.quit()
+    payload = {
+        "recipient": {
+            "user_id": ZALO_USER_ID
+        },
+        "message": {
+            "text": text
+        }
+    }
 
+    headers = {
+        "access_token": ZALO_ACCESS_TOKEN,
+        "Content-Type": "application/json"
+    }
 
+    requests.post(url, json=payload, headers=headers)
