@@ -173,13 +173,13 @@ line-height:2.2;
 text-align:justify;
 }
 
-.about-content ul{
+.about-list ul{
 margin-left:40px;
 margin-top:20px;
 margin-bottom:20px;
 }
 
-.about-content li{
+.about-list li{
 margin-bottom:14px;
 line-height:2.1;
 }
@@ -324,6 +324,10 @@ max-width:320px;
 padding:35px 25px;
 }
 
+.contact-form{
+max-width:92%;
+margin:auto;
+}
 
 }
 
