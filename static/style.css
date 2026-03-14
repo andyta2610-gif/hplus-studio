@@ -156,14 +156,9 @@ padding:0 8%;
 text-align:center;
 }
 
-.page-title h1{
-font-size:30px;
-font-weight:550;
-}
-
 .about-content{
 max-width:1200px;
-margin:0 auto;
+margin:40px auto 0 auto;   /* thêm khoảng cách phía trên */
 padding:0 8%;
 font-size:17px;
 line-height:2.2;
@@ -171,13 +166,13 @@ text-align:justify;
 }
 
 .about-text ul{
-margin-left:40px;
+margin-left:60px;
 padding-left:20px;
 }
 
 .about-text li{
-margin-bottom:12px;
-line-height:2;
+margin-bottom:14px;
+line-height:2.1;
 }
 
 /* ========================
