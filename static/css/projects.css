@@ -96,7 +96,7 @@ filter:brightness(.7);
 @media (max-width:768px){
 
 .projects-page{
-width:92%;
+width:90%;
 gap:60px;
 }
 
