@@ -230,7 +230,7 @@ Mô tả:
 {message}
 """
 
-    url = "https://openapi.zalo.me/v3.0/oa/message/cs"
+    url = "https://openapi.zalo.me/v3.0/oa/message"
 
     payload = {
         "recipient": {
@@ -246,4 +246,7 @@ Mô tả:
         "Content-Type": "application/json"
     }
 
-    requests.post(url, json=payload, headers=headers)
+    response = requests.post(url, json=payload, headers=headers)
+
+    print("ZALO STATUS:", response.status_code)
+    print("ZALO RESPONSE:", response.text)
