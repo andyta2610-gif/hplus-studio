@@ -174,7 +174,7 @@ text-align:justify;
 }
 
 .about-list{
-margin-left:40px;
+margin-left:30px;
 margin-top:20px;
 margin-bottom:20px;
 }
@@ -319,10 +319,6 @@ margin-top:1px;
 .footer-map iframe{
 width:100%;
 max-width:320px;
-}
-
-.about-content{
-padding:35px 25px;
 }
 
 .contact-form{

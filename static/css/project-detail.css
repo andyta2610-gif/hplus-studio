@@ -4,10 +4,11 @@ PROJECT DETAIL
 
 .project-detail-container{
 
+width:90%;
 max-width:1400px;
-margin:auto;
-
-padding:80px 40px;
+margin:100px auto;
+gap:120px;
+padding:60px 30px;
 
 display:block;
 

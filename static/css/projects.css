@@ -134,7 +134,7 @@ display:none;
 /* gallery 3 ảnh / hàng */
 .project-grid{
 grid-template-columns:repeat(3,1fr);
-gap:6px;
+gap:3px;
 }
 
 .project-grid img{
