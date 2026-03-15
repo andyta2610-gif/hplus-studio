@@ -157,7 +157,7 @@ text-align:center;
 }
 
 .about-content{
-max-width:900px;
+max-width:1200px;
 margin:40px auto;
 
 padding:60px 70px;
@@ -174,7 +174,7 @@ text-align:justify;
 }
 
 .about-list{
-margin-left:30px;
+margin-left:20px;
 margin-top:20px;
 margin-bottom:20px;
 }
@@ -319,13 +319,15 @@ text-align:center;
 
 .footer-map{
 justify-content:center;
-margin-top:6px;
+margin-top:2px;
 max-width:240px;
+display:flex;
 }
 
 .footer-map iframe{
-height:80px;
-
+width:260px;
+height:90px;
+border-radius:12px;
 }
 
 }
