@@ -13,12 +13,12 @@
 
 <meta name="description" content="H+ Studio chuyên thiết kế kiến trúc, nội thất, villa và nhà phố. Không gian sống tối giản, hiện đại, tinh tế.">
 
-<link rel="stylesheet" href="/static/style.css?v=8">
-<link rel="stylesheet" href="/static/css/home.css?v=8">
-<link rel="stylesheet" href="/static/css/projects.css?v=8">
-<link rel="stylesheet" href="/static/css/project-detail.css?v=8">
-<link rel="stylesheet" href="/static/css/contact.css?v=8">
-<link rel="stylesheet" href="/static/css/news.css?v=8">
+<link rel="stylesheet" href="/static/style.css?v=9">
+<link rel="stylesheet" href="/static/css/home.css?v=9">
+<link rel="stylesheet" href="/static/css/projects.css?v=9">
+<link rel="stylesheet" href="/static/css/project-detail.css?v=9">
+<link rel="stylesheet" href="/static/css/contact.css?v=9">
+<link rel="stylesheet" href="/static/css/news.css?v=9">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -73,7 +73,7 @@
 
 <div class="footer-left">
 
-<p>Số 55 Nguyễn Đình Thi - Tam Thắng - TpHCM • hotline 866.62.58.68</p>
+<p>Số 55 Nguyễn Đình Thi - Tam Thắng - TpHCM  •  hotline 866.62.58.68</p>
 
 <div class="footer-social">
 
@@ -114,31 +114,17 @@ src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12907.336052858966!2d1
 document.addEventListener("DOMContentLoaded", function(){
 
 const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".nav-links");
+const nav = document.querySelector(".nav-links");
 const overlay = document.querySelector(".menu-overlay");
 
-if(toggle){
-
-toggle.addEventListener("click", function(){
-
-menu.classList.toggle("active");
+toggle.addEventListener("click", () => {
+nav.classList.toggle("active");
 overlay.classList.toggle("active");
-
 });
 
-}
-
-if(overlay){
-
-overlay.addEventListener("click", function(){
-
-menu.classList.remove("active");
+overlay.addEventListener("click", () => {
+nav.classList.remove("active");
 overlay.classList.remove("active");
-
-});
-
-}
-
 });
 
 </script>

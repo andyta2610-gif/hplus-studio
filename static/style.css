@@ -13,7 +13,6 @@ font-family:"Inter",sans-serif;
 color:#111;
 background:#fff;
 padding-top:70px;
-overflow-x:hidden;
 }
 
 
@@ -33,7 +32,7 @@ backdrop-filter:blur(10px);
 display:flex;
 align-items:center;
 justify-content:space-between;
-z-index:20000;
+z-index:10000;
 }
 
 .logo{
@@ -55,9 +54,7 @@ letter-spacing:1.5px;
 }
 
 
-/* ========================
-DESKTOP MENU
-======================== */
+/* DESKTOP MENU */
 
 .nav-links{
 display:flex;
@@ -91,57 +88,9 @@ margin-bottom:30px;
 font-weight:550;
 }
 
-
-/* ========================
-PAGE TITLE
-======================== */
-
-.page-title{
-max-width:1200px;
-margin:120px auto 40px auto;
-padding:0 8%;
-text-align:center;
-}
-
 .page-title h1{
-font-size:30px;
-font-weight:550;
-margin-bottom:30px;
-}
-
-
-/* ========================
-ABOUT
-======================== */
-
-.about-content{
-max-width:900px;
-margin:40px auto;
-
-padding:60px 70px;
-
-background:#ffffff;
-
-border-radius:6px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-font-size:17px;
-line-height:2.2;
-text-align:justify;
-}
-
-.about-list{
-margin-left:40px;
 margin-top:20px;
-margin-bottom:20px;
 }
-
-.about-list li{
-margin-bottom:14px;
-line-height:2.1;
-}
-
 
 /* ========================
 FOOTER
@@ -149,18 +98,20 @@ FOOTER
 
 .footer{
 background:#afa89b;
-padding:20px 10px;
+padding:10px;
 }
 
 .footer-wrapper{
 max-width:1200px;
-margin:auto;
+margin:20px;
 
 display:grid;
-grid-template-columns:1fr auto;
+grid-template-columns:1fr auto;   /* info trái - map phải */
 align-items:center;
 gap:40px;
 }
+
+/* info */
 
 .footer-left p{
 margin:5px 0;
@@ -182,16 +133,70 @@ margin-left:14px;
 color:#666;
 }
 
+/* map */
+
 .footer-map{
 display:flex;
-justify-content:center;
+justify-content:flex-end;
 }
 
 .footer-map iframe{
 width:300px;
-height:110px;
-border-radius:12px;
+height:100px;
+border-radius:10px;
 border:0;
+}
+
+/* ABOUT PAGE TITLE */
+
+.page-title{
+max-width:1300px;
+margin:120px auto 40px auto;
+padding:0 6%;
+text-align:center;
+}
+
+.about-content{
+max-width:1200px;
+margin:40px auto;
+
+padding:60px 60px;
+
+background:#ffffff;
+
+border-radius:6px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+font-size:17px;
+line-height:2.2;
+text-align:justify;
+}
+
+.about-list{
+margin-left:20px;
+margin-top:20px;
+margin-bottom:20px;
+}
+
+.about-list li{
+margin-bottom:14px;
+line-height:2.1;
+padding-left:6px;
+}
+
+/* ========================
+HAMBURGER
+======================== */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.menu-overlay{
+display:none;
 }
 
 
@@ -227,6 +232,8 @@ MOBILE
 
 @media (max-width:768px){
 
+/* navbar */
+
 .navbar{
 padding:10px 15px;
 }
@@ -238,41 +245,35 @@ max-width:180px;
 line-height:1.2;
 }
 
-/* toggle button */
-
 .menu-toggle{
 display:block;
-font-size:26px;
+font-size:22px;
 cursor:pointer;
-z-index:20001;
+z-index:99999;
+position:relative;
 }
-
-
-/* mobile menu */
 
 .nav-links{
 position:fixed;
 top:0;
 right:-100%;
-
-width:220px;
+width:30vw;
+min-width:120px;
+max-width:200px;
 height:100vh;
-
 background:white;
 
 display:flex;
 flex-direction:column;
 justify-content:center;
 
-padding-left:30px;
+padding-left:25px;
 
 transition:0.4s;
-
 box-shadow:-10px 0 20px rgba(0,0,0,0.15);
+z-index:88888;
 
-z-index:18000;
-
-pointer-events:none;
+pointer-events:none;   /* QUAN TRỌNG */
 opacity:0;
 }
 
@@ -287,16 +288,13 @@ font-size:18px;
 margin:18px 0;
 }
 
-
-/* overlay */
-
 .menu-overlay{
 position:fixed;
 top:0;
 left:0;
 
 width:100%;
-height:100vh;
+height:30vh;
 
 background:rgba(0,0,0,0.35);
 
@@ -305,7 +303,7 @@ visibility:hidden;
 
 transition:0.3s;
 
-z-index:17000;
+z-index:99990;
 }
 
 .menu-overlay.active{
@@ -314,21 +312,31 @@ visibility:visible;
 }
 
 
-/* footer */
-
 .footer-wrapper{
-grid-template-columns:1fr;
+grid-template-columns:1fr;   /* xuống 1 cột */
 text-align:center;
 }
 
 .footer-map{
 justify-content:center;
-margin-top:5px;
+margin-top:10px;
+max-width:240px;
+display:flex;
 }
 
 .footer-map iframe{
-width:220px;
+width:260px;
 height:90px;
+border-radius:12px;
 }
 
+}
+
+.page-title h1{
+font-size:30px;
+font-weight:550;
+text-align:center;
+
+margin-top:10px;
+margin-bottom:30px;
 }
