@@ -33,7 +33,6 @@ display:grid;
 
 grid-template-columns:repeat(5,1fr);
 gap:6px;
-
 margin-top:40px;
 
 }
@@ -45,8 +44,6 @@ aspect-ratio:1/1;
 object-fit:cover;
 border-radius:0px;
 transition:0.3s;
-gap:6px;
-
 }
 
 .project-gallery img:hover{
@@ -124,14 +121,11 @@ padding:10px 5px;
 .project-gallery{
 
 grid-template-columns:repeat(3,1fr);
-
+gap:3px;
 }
 
 .project-gallery img{
-width:100%;
-height:auto;
 aspect-ratio:1/1;
-gap:3px;
 }
 
 
