@@ -161,7 +161,6 @@ max-width:1300px;
 margin:120px auto 40px auto;
 padding:0 6%;
 text-align:center;
-z-index:2;
 }
 
 .about-content{
@@ -179,6 +178,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.08);
 font-size:17px;
 line-height:2.2;
 text-align:justify;
+z-index:2;
 }
 
 .about-list{

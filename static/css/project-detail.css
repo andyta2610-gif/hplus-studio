@@ -9,7 +9,6 @@ max-width:1500px;
 margin:100px auto;
 padding:60px 30px;
 display:flex;
-
 }
 
 
@@ -50,7 +49,7 @@ height:100%;
 background:rgba(0,0,0,0.9);
 align-items:center;
 justify-content:center;
-z-index:100;
+z-index:10;
 }
 
 .lightbox img{
@@ -102,13 +101,17 @@ padding:10px 5px;
 }
 
 .project-gallery{
-
+display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:3px;
+gap:6px;
 }
 
 .project-gallery img{
+width:100%;
 aspect-ratio:1/1;
+object-fit:cover;
+display:block;
+transition:.3s;
 }
 
 
