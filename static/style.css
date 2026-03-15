@@ -318,13 +318,13 @@ text-align:center;
 .footer-map{
 justify-content:center;
 margin-top:6px;
-max-width:240px;
+display:flex
 }
 
 .footer-map iframe{
 height:80px;
-align:center;
-
+width:260px;
+border radius:10px;
 }
 
 }
