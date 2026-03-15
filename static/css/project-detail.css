@@ -19,7 +19,6 @@ display:flex;
 display:grid;
 grid-template-columns:repeat(5,1fr);
 gap:6px;
-margin-top:10px;
 
 }
 
@@ -31,10 +30,6 @@ object-fit:cover;
 border-radius:0px;
 transition:0.3s;
 }
-
-.project-gallery img:hover{
-
-transform:scale(1.01);
 
 }
 

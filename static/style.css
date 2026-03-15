@@ -271,7 +271,7 @@ padding-left:25px;
 
 transition:0.4s;
 box-shadow:-10px 0 20px rgba(0,0,0,0.15);
-z-index:10003;
+z-index:10000;
 
 pointer-events:none;   /* QUAN TRỌNG */
 opacity:0;
@@ -325,7 +325,6 @@ max-width:240px;
 
 .footer-map iframe{
 height:80px;
-align:center;
 
 }
 
