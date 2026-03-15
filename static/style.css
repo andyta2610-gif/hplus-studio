@@ -88,6 +88,11 @@ margin-bottom:30px;
 font-weight:550;
 }
 
+.section{
+position:relative;
+z-index:1;
+}
+
 .page-title h1{
 margin-top:20px;
 }
@@ -156,7 +161,7 @@ max-width:1300px;
 margin:120px auto 40px auto;
 padding:0 6%;
 text-align:center;
-z-index:10;
+z-index:1;
 }
 
 .about-content{
@@ -306,7 +311,7 @@ visibility:hidden;
 
 transition:0.3s;
 
-z-index:99990;
+z-index:9999;
 }
 
 .menu-overlay.active{
@@ -322,15 +327,15 @@ text-align:center;
 
 .footer-map{
 justify-content:center;
-margin-top:10px;
-max-width:240px;
+margin-top:1px;
+max-width:100%;
 display:flex;
 }
 
 .footer-map iframe{
 width:260px;
-height:90px;
-border-radius:12px;
+height:80px;
+border-radius:6px;
 }
 
 }
