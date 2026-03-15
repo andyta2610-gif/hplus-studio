@@ -117,7 +117,7 @@ MOBILE
 
 display:block;
 
-padding:20px 20px;
+padding:10px 5px;
 
 }
 
@@ -128,10 +128,10 @@ grid-template-columns:repeat(3,1fr);
 }
 
 .project-gallery img{
-width:95%;
+width:100%;
 height:auto;
 aspect-ratio:1/1;
-gap:6px;
+gap:3px;
 }
 
 

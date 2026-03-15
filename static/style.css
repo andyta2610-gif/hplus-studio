@@ -32,7 +32,7 @@ backdrop-filter:blur(10px);
 display:flex;
 align-items:center;
 justify-content:space-between;
-z-index:9999;
+z-index:10001;
 }
 
 .logo{
@@ -234,17 +234,8 @@ MOBILE
 
 /* navbar */
 
-header{
-position:relative;
-z-index:9999;
-}
-
 .navbar{
 padding:10px 15px;
-}
-.navbar{
-position:relative;
-z-index:9999;
 }
 
 .logo-text{
@@ -255,9 +246,10 @@ line-height:1.2;
 }
 
 .menu-toggle{
-display:block;
-z-index:10000;
-background:red;
+font-size:22px;
+cursor:pointer;
+z-index:10002;
+position:relative;
 }
 
 .nav-links{
@@ -294,25 +286,27 @@ font-size:18px;
 margin:18px 0;
 }
 
-/* overlay */
-
 .menu-overlay{
-display:block;
 position:fixed;
 top:0;
 left:0;
+
 width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
+height:100vh;
+
+background:rgba(0,0,0,0.35);
+
 opacity:0;
-pointer-events:none;
+visibility:hidden;
+
 transition:0.3s;
-z-index:10000;
+
+z-index:9998;
 }
 
 .menu-overlay.active{
 opacity:1;
-pointer-events:auto;
+visibility:visible;
 }
 
 
@@ -323,17 +317,13 @@ text-align:center;
 
 .footer-map{
 justify-content:center;
-margin-top:1px;
+margin-top:6px;
+max-width:240px;
 }
 
 .footer-map iframe{
-width:100%;
-max-width:320px;
-}
+height:80px;
 
-.contact-form{
-max-width:92%;
-margin:auto;
 }
 
 }
