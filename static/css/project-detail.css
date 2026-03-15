@@ -18,7 +18,8 @@ display:flex;
 .project-gallery{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:6px;
+column-gap: 6px;
+row-gap: 6px;
 
 }
 
@@ -28,7 +29,11 @@ width:100%;
 aspect-ratio:1/1;
 object-fit:cover;
 border-radius:0px;
-transition:0.3s;
+transition:0.3s ease;
+}
+
+.project-gallery img:hover{
+transform:scale(1.01);
 }
 
 /* ========================

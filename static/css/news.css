@@ -57,10 +57,9 @@ gap:8px;
 
 .news img{
 width:95%;
-height:auto;
+height:100px;
 aspect-ratio:1/1;
 object-fit:cover;
 }
-
 
 }

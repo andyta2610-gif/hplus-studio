@@ -32,7 +32,7 @@ backdrop-filter:blur(10px);
 display:flex;
 align-items:center;
 justify-content:space-between;
-z-index:10001;
+z-index:10000;
 }
 
 .logo{
@@ -249,7 +249,7 @@ line-height:1.2;
 display:block;
 font-size:22px;
 cursor:pointer;
-z-index:10002;
+z-index:99999;
 position:relative;
 }
 
@@ -271,7 +271,7 @@ padding-left:25px;
 
 transition:0.4s;
 box-shadow:-10px 0 20px rgba(0,0,0,0.15);
-z-index:10000;
+z-index:88888;
 
 pointer-events:none;   /* QUAN TRỌNG */
 opacity:0;
@@ -303,7 +303,7 @@ visibility:hidden;
 
 transition:0.3s;
 
-z-index:9998;
+z-index:99990;
 }
 
 .menu-overlay.active{
