@@ -98,7 +98,7 @@ FOOTER
 
 .footer{
 background:#afa89b;
-padding:20px;
+padding:10px;
 }
 
 .footer-wrapper{
@@ -142,7 +142,7 @@ justify-content:flex-end;
 
 .footer-map iframe{
 width:300px;
-height:120px;
+height:100px;
 border-radius:10px;
 border:0;
 }
@@ -246,6 +246,7 @@ line-height:1.2;
 }
 
 .menu-toggle{
+display:block;
 font-size:22px;
 cursor:pointer;
 z-index:10002;
@@ -256,7 +257,7 @@ position:relative;
 position:fixed;
 top:0;
 right:-100%;
-width:35vw;
+width:30vw;
 min-width:120px;
 max-width:200px;
 height:100vh;
@@ -279,6 +280,7 @@ opacity:0;
 .nav-links.active{
 right:0;
 pointer-events:auto;
+opacity:1;
 }
 
 .nav-links a{
@@ -318,13 +320,13 @@ text-align:center;
 .footer-map{
 justify-content:center;
 margin-top:6px;
-display:flex
+max-width:240px;
 }
 
 .footer-map iframe{
 height:80px;
-width:260px;
-border radius:10px;
+align:center;
+
 }
 
 }
