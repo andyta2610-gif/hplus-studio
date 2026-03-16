@@ -7,6 +7,6 @@ http://127.0.0.1:8000
 
 git add .
 git commit -m "update website"
-git push
 
+ git push
  git commit -m "update .css"

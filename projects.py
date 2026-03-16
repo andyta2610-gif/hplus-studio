@@ -413,7 +413,7 @@ projects_data = [
             "/static/projects/llqhouse/9.jpg",
         ],
 
-        "images": [f"/static/projects/llqhouse/{i}.jpg" for i in range(1, 18)]
+        "images": [f"/static/projects/llqhouse/{i}.jpg" for i in range(1, 16)]
     },
 
 
