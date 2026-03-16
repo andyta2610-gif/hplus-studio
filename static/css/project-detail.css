@@ -17,8 +17,8 @@ display:flex;
 .project-gallery{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-column-gap:6px;
-row-gap:6px;
+column-gap:3px;
+row-gap:3px;
 
 }
 
