@@ -100,6 +100,7 @@ projects_data = [
         "Design": "H2 & H+",
         "Status": "Concept",
         "description": "…",
+        "featured": True,
 
         "featured_images": [
             "/static/projects/dongho_kg/1.jpg",
@@ -127,7 +128,6 @@ projects_data = [
         "Design": "H2 & H+",
         "Status": "Concept",
         "description": "…",
-        "featured": True,
 
         "featured_images": [
             "/static/projects/happy garden retreat/1.jpg",
@@ -229,7 +229,7 @@ projects_data = [
     {
         "id": 9,
         "slug": "vif-office",
-        "title": "Tập Đoàn VFI",
+        "title": "VFI GROUP",
         "Project_type": "Office",
         "Area": "1000m2",
         "Year": "2023",
@@ -254,9 +254,38 @@ projects_data = [
         "images": [f"/static/projects/vfi/{i}.jpg" for i in range(1, 63)]
     },
 
-    # -----------------------------------------------------
+
+# -----------------------------------------------------
     {
         "id": 10,
+        "slug": "joyhotel",
+        "title": "Khach sạn Joy Boutique",
+        "Project_type": "hotel",
+        "Area": "1200m2",
+        "Year": "2023",
+        "Design": "H2 & H+",
+        "Generalcontractor": "H+",
+        "Status": "Built",
+        "description": "…",
+
+        "featured_images": [
+            "/static/projects/joyhotel/1.jpg",
+            "/static/projects/joyhotel/2.jpg",
+            "/static/projects/joyhotel/3.jpg",
+            "/static/projects/joyhotel/4.jpg",
+            "/static/projects/joyhotel/5.jpg",
+            "/static/projects/joyhotel/6.jpg",
+            "/static/projects/joyhotel/7.jpg",
+            "/static/projects/joyhotel/8.jpg",
+            "/static/projects/joyhotel/9.jpg",
+        ],
+
+        "images": [f"/static/projects/joyhotel/{i}.jpg" for i in range(1, 36)]
+    },
+
+    # -----------------------------------------------------
+    {
+        "id": 11,
         "slug": "tran-xuan-do-house",
         "title": "Trần Xuân Độ House",
         "Project_type": "Townhouse",
@@ -282,7 +311,7 @@ projects_data = [
     },
 # -----------------------------------------------------
     {
-        "id": 11,
+        "id": 12,
         "slug": "thao-dien-arpartment",
         "title": "Thảo Điền Apartment",
         "Project_type": "Apartment",
@@ -309,7 +338,7 @@ projects_data = [
 
 # -----------------------------------------------------
     {
-        "id": 12,
+        "id": 13,
         "slug": "daian_arpartment",
         "title": "Đại An Apartment",
         "Project_type": "Apartment",
@@ -317,7 +346,7 @@ projects_data = [
         "Year": "2021",
         "Design": "H2",
         "Generalcontractor": "H+",
-        "Status": "Concept",
+        "Status": "Built",
         "description": "…",
 
         "featured_images": [
@@ -336,7 +365,7 @@ projects_data = [
     },
 # -----------------------------------------------------
     {
-        "id": 13,
+        "id": 14,
         "slug": "levanhuan",
         "title": "Lê Văn Huân Apartment",
         "Project_type": "Apartment",
@@ -360,8 +389,115 @@ projects_data = [
 
         "images": [f"/static/projects/levanhuan/{i}.jpg" for i in range(1, 28)]
     },
+# -----------------------------------------------------
+    {
+        "id": 15,
+        "slug": "laclongquanhouse",
+        "title": "Lạc Long Quân House",
+        "Project_type": "House",
+        "Area": "210m2",
+        "Year": "2021",
+        "Design": "H+",
+        "Status": "Concept",
+        "description": "…",
+
+        "featured_images": [
+            "/static/projects/llqhouse/1.jpg",
+            "/static/projects/llqhouse/2.jpg",
+            "/static/projects/llqhouse/3.jpg",
+            "/static/projects/llqhouse/4.jpg",
+            "/static/projects/llqhouse/5.jpg",
+            "/static/projects/llqhouse/6.jpg",
+            "/static/projects/llqhouse/7.jpg",
+            "/static/projects/llqhouse/8.jpg",
+            "/static/projects/llqhouse/9.jpg",
+        ],
+
+        "images": [f"/static/projects/llqhouse/{i}.jpg" for i in range(1, 18)]
+    },
 
 
+# -----------------------------------------------------
+    {
+        "id": 16,
+        "slug": "vavilla",
+        "title": "Việt Anh Villa",
+        "Project_type": "apartment",
+        "Area": "210m2",
+        "Year": "2023",
+        "Design": "H+",
+        "Status": "Concept",
+        "description": "…",
+
+        "featured_images": [
+            "/static/projects/vavilla/1.jpg",
+            "/static/projects/vavilla/2.jpg",
+            "/static/projects/vavilla/3.jpg",
+            "/static/projects/vavilla/4.jpg",
+            "/static/projects/vavilla/5.jpg",
+            "/static/projects/vavilla/6.jpg",
+            "/static/projects/vavilla/7.jpg",
+            "/static/projects/vavilla/8.jpg",
+            "/static/projects/vavilla/9.jpg",
+        ],
+
+        "images": [f"/static/projects/vavilla/{i}.jpg" for i in range(1, 10)]
+    },
+
+
+# -----------------------------------------------------
+    {
+        "id": 17,
+        "slug": "vibahouse",
+        "title": "Vi Ba House",
+        "Project_type": "house",
+        "Area": "300m2",
+        "Year": "2020",
+        "Design": "H+",
+        "Status": "Concept",
+        "description": "…",
+
+        "featured_images": [
+            "/static/projects/vibahouse/1.jpg",
+            "/static/projects/vibahouse/2.jpg",
+            "/static/projects/vibahouse/3.jpg",
+            "/static/projects/vibahouse/4.jpg",
+            "/static/projects/vibahouse/5.jpg",
+            "/static/projects/vibahouse/6.jpg",
+            "/static/projects/vibahouse/7.jpg",
+            "/static/projects/vibahouse/8.jpg",
+            "/static/projects/vibahouse/9.jpg",
+        ],
+
+        "images": [f"/static/projects/vibahouse/{i}.jpg" for i in range(1, 15)]
+    },
+
+# -----------------------------------------------------
+    {
+        "id": 17,
+        "slug": "Hoalonghouse",
+        "title": "Hòa Long House",
+        "Project_type": "house",
+        "Area": "200m2",
+        "Year": "2021",
+        "Design": "H2 & H+",
+        "Status": "Concept",
+        "description": "…",
+
+        "featured_images": [
+            "/static/projects/hoalonghouse/1.jpg",
+            "/static/projects/hoalonghouse/2.jpg",
+            "/static/projects/hoalonghouse/3.jpg",
+            "/static/projects/hoalonghouse/4.jpg",
+            "/static/projects/hoalonghouse/5.jpg",
+            "/static/projects/hoalonghouse/6.jpg",
+            "/static/projects/hoalonghouse/7.jpg",
+            "/static/projects/hoalonghouse/8.jpg",
+            "/static/projects/hoalonghouse/9.jpg",
+        ],
+
+        "images": [f"/static/projects/hoalonghouse/{i}.jpg" for i in range(1, 15)]
+    },
 ]
 
 
