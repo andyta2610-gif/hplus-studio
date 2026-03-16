@@ -77,12 +77,12 @@ transition:.4s;
 transform:scale(1.05);
 }
 
-.featured-info h2{
+.featured-title h2{
 text-align:center;
 margin-top:80px;
 margin-bottom:50px;
 font-size:28px;
-font-weight:550;
+font-weight:600;
 }
 
 .featured-info h3{
@@ -119,9 +119,9 @@ grid-template-columns:repeat(2,1fr);
 gap:8px;
 }
 
-.section-title h2{
+.featured-title h2{
 text-align:center;
-font-size:22px;
+font-size:24px;
 font-weight:550;
 }
 
