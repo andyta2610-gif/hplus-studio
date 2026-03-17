@@ -95,7 +95,7 @@ projects_data = [
         "slug": "dongho_kg",
         "title": "Đông Hồ Kiên Giang Resort",
         "Project_type": "resort",
-        "Area": "15000m2",
+        "Area": "150000m2",
         "Year": "2025",
         "Design": "H2 & H+",
         "Status": "Concept",
