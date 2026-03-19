@@ -259,11 +259,15 @@ Mô tả:
 # =============================
 # ZALO WEBHOOK (NHẬN TIN NHẮN)
 # =============================
+from fastapi.responses import PlainTextResponse
+
 @app.post("/zalo/webhook")
 async def zalo_webhook(request: Request):
-    data = await request.json()
+    try:
+        data = await request.body()
+        print("==== ZALO WEBHOOK ====")
+        print(data)
+    except Exception as e:
+        print("ERROR:", str(e))
 
-    print("==== ZALO WEBHOOK ====")
-    print(data)
-
-    return {"status": "ok"}
+    return PlainTextResponse("OK", status_code=200)
