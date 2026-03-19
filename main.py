@@ -255,3 +255,15 @@ Mô tả:
 
     except Exception as e:
         print("ZALO ERROR:", str(e))
+
+# =============================
+# ZALO WEBHOOK (NHẬN TIN NHẮN)
+# =============================
+@app.post("/zalo/webhook")
+async def zalo_webhook(request: Request):
+    data = await request.json()
+
+    print("==== ZALO WEBHOOK ====")
+    print(data)
+
+    return {"status": "ok"}
