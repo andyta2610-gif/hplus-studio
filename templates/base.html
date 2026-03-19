@@ -13,12 +13,12 @@
 
 <meta name="description" content="H+ Studio chuyên thiết kế kiến trúc, nội thất, villa và nhà phố. Không gian sống tối giản, hiện đại, tinh tế.">
 
-<link rel="stylesheet" href="/static/style.css?v=12">
-<link rel="stylesheet" href="/static/css/home.css?v=12">
-<link rel="stylesheet" href="/static/css/projects.css?v=12">
-<link rel="stylesheet" href="/static/css/project-detail.css?v=12">
-<link rel="stylesheet" href="/static/css/contact.css?v=12">
-<link rel="stylesheet" href="/static/css/news.css?v=12">
+<link rel="stylesheet" href="/static/style.css?v=13">
+<link rel="stylesheet" href="/static/css/home.css?v=13">
+<link rel="stylesheet" href="/static/css/projects.css?v=13">
+<link rel="stylesheet" href="/static/css/project-detail.css?v=13">
+<link rel="stylesheet" href="/static/css/contact.css?v=13">
+<link rel="stylesheet" href="/static/css/news.css?v=13">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -117,14 +117,20 @@ const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav-links");
 const overlay = document.querySelector(".menu-overlay");
 
-toggle.addEventListener("click", () => {
-nav.classList.toggle("active");
-overlay.classList.toggle("active");
-});
+if(toggle && nav && overlay){
 
-overlay.addEventListener("click", () => {
-nav.classList.remove("active");
-overlay.classList.remove("active");
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", () => {
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+    });
+
+}
+
 });
 
 </script>
