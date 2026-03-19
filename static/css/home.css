@@ -47,7 +47,7 @@ color:#111;
 /* FEATURED PROJECTS */
 
 .featured-grid{
-max-width:1700px;
+max-width:1200px;
 margin:0 auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -80,7 +80,7 @@ transform:scale(1.05);
 .featured-title {
 text-align:center;
 margin-top:80px;
-margin-bottom:50px;
+margin-bottom:40px;
 font-size:28px;
 font-weight:600;
 }
