@@ -261,8 +261,12 @@ Mô tả:
 # =============================
 from fastapi.responses import PlainTextResponse
 
-@app.post("/zalo/webhook")
+@app.api_route("/zalo/webhook", methods=["GET", "POST"])
 async def zalo_webhook(request: Request):
+
+    if request.method == "GET":
+        return PlainTextResponse("OK", status_code=200)
+
     try:
         data = await request.body()
         print("==== ZALO WEBHOOK ====")

@@ -35,29 +35,32 @@
 
 <!-- FEATURED PROJECTS -->
 <section class="section featured-section">
+    <div class="container">
 
-    <h2 class="featured-title">Highlight Projects</h2>
+        <h2 class="featured-title">Highlight Projects</h2>
 
-    <div class="featured-grid">
+        <div class="featured-grid">
 
-        {% for p in featured_projects %}
+            {% for p in featured_projects %}
 
-        <a href="/projects#{{ p.slug }}" class="featured-card">
+            <a href="/projects#{{ p.slug }}" class="featured-card">
 
-            <div class="featured-image">
-                <img src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy">
-            </div>
+                <div class="featured-image">
+                    <img src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy">
+                </div>
 
-            <div class="featured-info">
-                <h3>{{ p.title }}</h3>
-                <p>{{ p.project_type }}</p>
-            </div>
+                <div class="featured-info">
+                    <h3>{{ p.title }}</h3>
+                    <p>{{ p.project_type }}</p>
+                </div>
 
-        </a>
+            </a>
 
-        {% endfor %}
+            {% endfor %}
 
-    </div>
+        </div>
+
+    </div> <!-- ✅ QUAN TRỌNG -->
 
 </section>
 
