@@ -113,23 +113,28 @@ src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12907.336052858966!2d1
 
 document.addEventListener("DOMContentLoaded", function(){
 
-const toggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav-links");
-const overlay = document.querySelector(".menu-overlay");
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+    const overlay = document.querySelector(".menu-overlay");
 
-if(toggle && nav && overlay){
+    if(toggle && nav && overlay){
 
-    toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-        overlay.classList.toggle("active");
-    });
+        toggle.addEventListener("click", () => {
+            if(nav.classList.contains("active")){
+                nav.classList.remove("active");
+                overlay.classList.remove("active");
+            } else {
+                nav.classList.add("active");
+                overlay.classList.add("active");
+            }
+        });
 
-    overlay.addEventListener("click", () => {
-        nav.classList.remove("active");
-        overlay.classList.remove("active");
-    });
+        overlay.addEventListener("click", () => {
+            nav.classList.remove("active");
+            overlay.classList.remove("active");
+        });
 
-}
+    }
 
 });
 

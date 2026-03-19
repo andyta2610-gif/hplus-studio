@@ -25,6 +25,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+EMAIL_SENDER = "hplus.studio.vt@gmail.com"
+EMAIL_PASSWORD = "dgwbboxerzhzyabw"
+EMAIL_RECEIVER = "hplus.studio.vt@gmail.com"
+
 # =============================
 # STATIC
 # =============================
@@ -160,7 +164,7 @@ def contact_submit(
 ):
 
     background_tasks.add_task(
-        send_zalo_notify,
+        send_email_notify,
         name,
         phone,
         email,
@@ -197,26 +201,17 @@ def news(request: Request):
         }
     )
 
-# =============================
-# ZALO OA CONFIG
-# =============================
-
-import requests
-from fastapi import Form, BackgroundTasks
-from fastapi.responses import RedirectResponse
-
-ZALO_ACCESS_TOKEN = "yANH6y7Ic1tyeTiTmj6I6_YXr1Z0pT5Q-UhO6RdDvdATnzqkzxt-Ji_AnX2MtO9XyT2gPvRwWoVorf4XrlQhVhFUw0lIwweKhTc9K-VYpnVN-CaIxltNUexQpG7qoUrUojxIAxJDzq_fnjGRbSpaUjlXx0ELrEvety7q59ZmrXJ0xPLyvFUd98lVusox_iOfujtPUQ_It0NGzl9KlSxEFkN3waJQxjmEXEQUHFU9km2fywTHmS2_LFt3j5QCruiCsgUv3OIIcdguiuam-eJ9GRkhvqRnel8PmBhnPQQUqJJ7fPXagR-hU-k_xndKdkr-v8xR7Bc4wHZQWlPhlxA-DEAWd5-3f8S1v8wwKhMAX1ZckzXptfNjT9_WnWUXm_zYsjx0DAlqd4BoqQOfblcITDZjZ29sH0b2SJBDoPCV"
-ZALO_USER_ID = "2736242473318265174"   # user đã từng chat với OA
-
 
 # =============================
-# SEND ZALO MESSAGE
+# GMAIL
 # =============================
 
-def send_zalo_notify(name, phone, email, location, project_type, budget, message):
+def send_email_notify(name, phone, email, location, project_type, budget, message):
 
-    text = f"""
-YÊU CẦU THIẾT KẾ MỚI
+    subject = "KHÁCH GỬI YÊU CẦU TỪ WEBSITE"
+
+    body = f"""
+KHÁCH GỬI YÊU CẦU MỚI
 
 Họ tên: {name}
 Điện thoại: {phone}
@@ -230,60 +225,17 @@ Mô tả:
 {message}
 """
 
-    url = "https://openapi.zalo.me/v3.0/oa/message/cs"
-
-    payload = {
-        "recipient": {
-            "user_id": ZALO_USER_ID
-        },
-        "message": {
-            "text": text
-        }
-    }
-
-    headers = {
-        "access_token": ZALO_ACCESS_TOKEN,
-        "Content-Type": "application/json"
-    }
+    msg = MIMEText(body)
+    msg["Subject"] = subject
+    msg["From"] = EMAIL_SENDER
+    msg["To"] = EMAIL_RECEIVER
 
     try:
-        response = requests.post(url, json=payload, headers=headers)
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(EMAIL_SENDER, EMAIL_PASSWORD)
+            server.send_message(msg)
 
-        print("==== ZALO DEBUG ====")
-        print("STATUS:", response.status_code)
-        print("RESPONSE:", response.text)
-
-    except Exception as e:
-        print("ZALO ERROR:", str(e))
-
-# =============================
-# ZALO WEBHOOK (NHẬN TIN NHẮN)
-# =============================
-
-# =============================
-# ZALO WEBHOOK (NHẬN TIN NHẮN)
-# =============================
-from fastapi.responses import PlainTextResponse
-
-@app.api_route("/zalo/webhook", methods=["GET", "POST"])
-async def zalo_webhook(request: Request):
-
-    # Zalo có thể gọi GET để verify
-    if request.method == "GET":
-        return PlainTextResponse("OK", status_code=200)
-
-    try:
-        data = await request.json()
-
-        print("==== ZALO WEBHOOK ====")
-        print(data)
-
-        # 👉 lấy user_id
-        user_id = data.get("sender", {}).get("id")
-        print("==== USER ID ====")
-        print(user_id)
+        print("EMAIL SENT SUCCESS")
 
     except Exception as e:
-        print("ERROR:", str(e))
-
-    return PlainTextResponse("OK", status_code=200)
+        print("EMAIL ERROR:", str(e))
