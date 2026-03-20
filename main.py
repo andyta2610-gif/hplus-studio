@@ -24,11 +24,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-EMAIL_SENDER = "hplus.studio.vt@gmail.com"
-EMAIL_PASSWORD = "cxokktgtdyjrvwlx"
-EMAIL_RECEIVER = "hplus.studio.vt@gmail.com"
-
 # =============================
 # STATIC
 # =============================
