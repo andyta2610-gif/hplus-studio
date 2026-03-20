@@ -216,7 +216,7 @@ def send_email_notify(name, phone, email, location, project_type, budget, messag
 
     body = {
         "from": "Hplus <onboarding@resend.dev>",
-        "to": ["andy.ta.2610@gmail.com"],
+        "to": ["hplus.studio.vt@gmail.com"],
         "subject": "Khách gửi yêu cầu mới từ website",
         "html": f"""
         <h2>Khách gửi yêu cầu mới</h2>
