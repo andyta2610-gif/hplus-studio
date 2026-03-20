@@ -26,7 +26,7 @@ app.add_middleware(
 )
 
 EMAIL_SENDER = "hplus.studio.vt@gmail.com"
-EMAIL_PASSWORD = "dgwbboxerzhzyabw"
+EMAIL_PASSWORD = "cxokktgtdyjrvwlx"
 EMAIL_RECEIVER = "hplus.studio.vt@gmail.com"
 
 # =============================
@@ -203,39 +203,39 @@ def news(request: Request):
 
 
 # =============================
-# GMAIL
+# EMAIL (RESEND)
 # =============================
+import requests
+import os
 
 def send_email_notify(name, phone, email, location, project_type, budget, message):
 
-    subject = "KHÁCH GỬI YÊU CẦU TỪ WEBSITE"
+    print("=== EMAIL FUNCTION CALLED ===")
 
-    body = f"""
-KHÁCH GỬI YÊU CẦU MỚI
+    url = "https://api.resend.com/emails"
 
-Họ tên: {name}
-Điện thoại: {phone}
-Email: {email}
+    headers = {
+        "Authorization": f"Bearer {os.getenv('RESEND_API_KEY')}",
+        "Content-Type": "application/json"
+    }
 
-Địa điểm: {location}
-Loại công trình: {project_type}
-Ngân sách: {budget}
+    body = {
+        "from": "Hplus <onboarding@resend.dev>",
+        "to": ["hplus.studio.vt@gmail.com"],
+        "subject": "Khách gửi yêu cầu mới từ website",
+        "html": f"""
+        <h2>Khách gửi yêu cầu mới</h2>
+        <p><b>Họ tên:</b> {name}</p>
+        <p><b>Điện thoại:</b> {phone}</p>
+        <p><b>Email:</b> {email}</p>
+        <p><b>Địa điểm:</b> {location}</p>
+        <p><b>Loại công trình:</b> {project_type}</p>
+        <p><b>Ngân sách:</b> {budget}</p>
+        <p><b>Mô tả:</b><br>{message}</p>
+        """
+    }
 
-Mô tả:
-{message}
-"""
+    response = requests.post(url, headers=headers, json=body)
 
-    msg = MIMEText(body)
-    msg["Subject"] = subject
-    msg["From"] = EMAIL_SENDER
-    msg["To"] = EMAIL_RECEIVER
-
-    try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-            server.login(EMAIL_SENDER, EMAIL_PASSWORD)
-            server.send_message(msg)
-
-        print("EMAIL SENT SUCCESS")
-
-    except Exception as e:
-        print("EMAIL ERROR:", str(e))
+    print("RESEND STATUS:", response.status_code)
+    print("RESEND RESPONSE:", response.text)
