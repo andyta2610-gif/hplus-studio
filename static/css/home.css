@@ -79,7 +79,7 @@ transform:scale(1.05);
 
 .featured-title {
 text-align:center;
-margin-top:10px;
+margin-top:0;
 margin-bottom:40px;
 font-size:28px;
 font-weight:600;

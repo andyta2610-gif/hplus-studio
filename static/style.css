@@ -81,6 +81,11 @@ SECTION
 padding:60px 8%;
 }
 
+.featured-section{
+    padding-top:20px;
+    padding-bottom:40px;
+}
+
 .section-title{
 text-align:center;
 font-size:30px;
